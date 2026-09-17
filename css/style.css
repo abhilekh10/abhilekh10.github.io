@@ -200,14 +200,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .site-header {
   position: fixed;
   inset: 0 0 auto;
-  z-index: 100;
+  z-index: 9999;
   height: var(--header-h);
   display: flex;
   align-items: center;
+  background: rgba(38, 24, 110, .3);
+  backdrop-filter: blur(8px);
   transition: background .3s var(--ease), box-shadow .3s var(--ease), backdrop-filter .3s var(--ease);
 }
 .site-header.is-stuck {
-  background: rgba(251, 250, 255, .9);
+  background: rgba(251, 250, 255, .95);
   backdrop-filter: blur(14px);
   box-shadow: 0 1px 0 var(--sand-200), var(--shadow-sm);
 }
@@ -247,13 +249,25 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   padding: 7px 13px;
   box-shadow: var(--shadow-sm);
 }
-.site-header:not(.is-stuck) .brand-tag,
+.site-header:not(.is-stuck) .brand-tag {
+  color: rgba(255, 255, 255, .95);
+  border-left-color: rgba(255, 255, 255, .4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 .site-footer .brand-tag { color: rgba(255, 255, 255, .62); border-left-color: rgba(255, 255, 255, .22); }
 
 /* header over the hero, before it sticks */
-.site-header:not(.is-stuck) .nav > ul a { color: rgba(255, 255, 255, .92); }
-.site-header:not(.is-stuck) .nav-call { color: var(--white); border-color: rgba(255, 255, 255, .4); }
-.site-header:not(.is-stuck) .nav-call:hover { background: rgba(255, 255, 255, .16); }
+.site-header:not(.is-stuck) .nav > ul a {
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+.site-header:not(.is-stuck) .nav-call {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, .6);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.site-header:not(.is-stuck) .nav-call:hover { background: rgba(255, 255, 255, .2); }
 .site-header:not(.is-stuck) .nav-toggle span { background: var(--white); }
 
 .nav { display: flex; align-items: center; gap: 22px; }
