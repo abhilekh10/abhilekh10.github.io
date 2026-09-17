@@ -756,6 +756,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* Events & artists */
 .events-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 32px; align-items: start; }
 
+/* homepage teaser — just the artists card, centred, no second column
+   to leave empty (the full event-type grid lives on events.html) */
+.events-teaser { display: flex; justify-content: center; }
+.events-teaser .artists { max-width: 640px; width: 100%; }
+
 .event-types { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .event-types li {
   display: flex;
