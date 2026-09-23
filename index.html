@@ -155,7 +155,157 @@
       </dl>
     </div>
 
-    <a class="hero-scroll" href="#what-we-do" aria-label="Scroll to what we do"><span></span></a>
+    <a class="hero-scroll" href="#explore" aria-label="Scroll to explore options"><span></span></a>
+  </section>
+
+  <!-- ============ EXPLORE: TAB NAVIGATION + FILTERS ============ -->
+  <section class="explore-section" id="explore">
+    <div class="wrap">
+      <!-- Tab Navigation -->
+      <div class="explore-tabs">
+        <button class="explore-tab is-active" data-tab="destinations" aria-selected="true">
+          🌍 Explore Destinations
+        </button>
+        <button class="explore-tab" data-tab="events" aria-selected="false">
+          🎭 Upcoming Events
+        </button>
+        <button class="explore-tab" data-tab="visas" aria-selected="false">
+          🛂 Visa Services
+        </button>
+      </div>
+
+      <!-- Destinations Tab -->
+      <div class="explore-content" data-tab-content="destinations">
+        <div class="explore-filters">
+          <button class="filter-pill is-active" data-filter="all">All Destinations</button>
+          <button class="filter-pill" data-filter="beach">Beach Escapes</button>
+          <button class="filter-pill" data-filter="cultural">Cultural Experiences</button>
+          <button class="filter-pill" data-filter="adventure">Adventure</button>
+          <button class="filter-pill" data-filter="mountain">Mountain Retreats</button>
+        </div>
+        <p class="event-count">20+ Curated Destinations Available</p>
+        <p style="text-align: center; color: var(--ink-500); margin-bottom: 40px;">Browse our handpicked luxury destinations worldwide →</p>
+        <div style="text-align: center;">
+          <a class="btn btn-primary btn-lg" href="destinations.html">Explore All Destinations</a>
+        </div>
+      </div>
+
+      <!-- Events Tab -->
+      <div class="explore-content" data-tab-content="events" style="display: none;">
+        <div class="explore-filters">
+          <button class="filter-pill is-active" data-filter="all">All Events</button>
+          <button class="filter-pill" data-filter="celebrity">Celebrity Nights</button>
+          <button class="filter-pill" data-filter="wedding">Weddings</button>
+          <button class="filter-pill" data-filter="corporate">Corporate Events</button>
+          <button class="filter-pill" data-filter="cultural">Cultural Gatherings</button>
+        </div>
+        <p class="event-count">2026 • 12+ Upcoming Events</p>
+
+        <!-- Date Group: December 2026 -->
+        <div class="date-group">
+          <h3 class="date-label">December 2026</h3>
+          <div class="event-cards-grid">
+            <article class="event-card" data-category="celebrity">
+              <img src="images/hero.jpg" alt="Celebrity night with Parmish Verma" class="event-card-image" />
+              <div class="event-card-content">
+                <h4 class="event-card-title">Celebrity Night</h4>
+                <p class="event-card-description">Live performance with Parmish Verma at exclusive venue</p>
+                <div class="event-card-footer">
+                  <span class="event-card-date">Dec 15, 2026</span>
+                  <span class="event-card-category">Celebrity</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="event-card" data-category="wedding">
+              <img src="images/hero.jpg" alt="Destination wedding planning" class="event-card-image" />
+              <div class="event-card-content">
+                <h4 class="event-card-title">Destination Wedding</h4>
+                <p class="event-card-description">Complete wedding management with travel arrangements</p>
+                <div class="event-card-footer">
+                  <span class="event-card-date">Dec 20, 2026</span>
+                  <span class="event-card-category">Wedding</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="event-card" data-category="corporate">
+              <img src="images/hero.jpg" alt="Corporate event management" class="event-card-image" />
+              <div class="event-card-content">
+                <h4 class="event-card-title">Corporate Offsite</h4>
+                <p class="event-card-description">End-to-end corporate event with travel & logistics</p>
+                <div class="event-card-footer">
+                  <span class="event-card-date">Dec 10, 2026</span>
+                  <span class="event-card-category">Corporate</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Date Group: January 2027 -->
+        <div class="date-group">
+          <h3 class="date-label">January 2027</h3>
+          <div class="event-cards-grid">
+            <article class="event-card" data-category="cultural">
+              <img src="images/hero.jpg" alt="Spiritual gathering" class="event-card-image" />
+              <div class="event-card-content">
+                <h4 class="event-card-title">Spiritual Gathering</h4>
+                <p class="event-card-description">Katha and spiritual discourse with Jaya Kishori</p>
+                <div class="event-card-footer">
+                  <span class="event-card-date">Jan 8, 2027</span>
+                  <span class="event-card-category">Cultural</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="event-card" data-category="celebrity">
+              <img src="images/hero.jpg" alt="Sara Gurpal live show" class="event-card-image" />
+              <div class="event-card-content">
+                <h4 class="event-card-title">Live Performance</h4>
+                <p class="event-card-description">Concert featuring Sara Gurpal with full production</p>
+                <div class="event-card-footer">
+                  <span class="event-card-date">Jan 15, 2027</span>
+                  <span class="event-card-category">Celebrity</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="event-card" data-category="wedding">
+              <img src="images/hero.jpg" alt="Luxury wedding celebration" class="event-card-image" />
+              <div class="event-card-content">
+                <h4 class="event-card-title">Wedding Sangeet</h4>
+                <p class="event-card-description">Multi-day wedding celebration with artist booking</p>
+                <div class="event-card-footer">
+                  <span class="event-card-date">Jan 22, 2027</span>
+                  <span class="event-card-category">Wedding</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a class="btn btn-primary btn-lg" href="events.html">View All Events</a>
+        </div>
+      </div>
+
+      <!-- Visas Tab -->
+      <div class="explore-content" data-tab-content="visas" style="display: none;">
+        <div class="explore-filters">
+          <button class="filter-pill is-active" data-filter="all">All Regions</button>
+          <button class="filter-pill" data-filter="asia">Asia & Far East</button>
+          <button class="filter-pill" data-filter="europe">Europe</button>
+          <button class="filter-pill" data-filter="americas">Americas</button>
+          <button class="filter-pill" data-filter="middle-east">Middle East</button>
+        </div>
+        <p class="event-count">88 Destinations • Visa Services Available</p>
+        <p style="text-align: center; color: var(--ink-500); margin-bottom: 40px;">Get visas processed for 88+ countries with complete discretion →</p>
+        <div style="text-align: center;">
+          <a class="btn btn-primary btn-lg" href="visas.html">Explore Visa Services</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ============ TWO BUSINESS LINES ============ -->

@@ -305,5 +305,65 @@
     });
   }
 
+  /* ---------- Explore tabs (Atlys-inspired UX) ---------- */
+  var exploreTabs = $$(".explore-tab");
+  var tabContents = $$(".explore-content");
+
+  exploreTabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var targetTab = this.getAttribute("data-tab");
+
+      // Hide all tab contents
+      tabContents.forEach(function (content) {
+        content.style.display = "none";
+      });
+
+      // Remove active state from all tabs
+      exploreTabs.forEach(function (t) {
+        t.classList.remove("is-active");
+        t.setAttribute("aria-selected", "false");
+      });
+
+      // Show selected tab content and mark tab as active
+      var targetContent = $("[data-tab-content='" + targetTab + "']");
+      if (targetContent) {
+        targetContent.style.display = "block";
+      }
+      this.classList.add("is-active");
+      this.setAttribute("aria-selected", "true");
+    });
+  });
+
+  /* ---------- filter pills (event categories) ---------- */
+  var filterPills = $$(".filter-pill");
+  filterPills.forEach(function (pill) {
+    pill.addEventListener("click", function () {
+      var filter = this.getAttribute("data-filter");
+      var activeTab = $(".explore-tab.is-active");
+      var activeContent = $("[data-tab-content='" + activeTab.getAttribute("data-tab") + "']");
+
+      // Update active filter pill
+      $$(".filter-pill").forEach(function (p) {
+        p.classList.remove("is-active");
+      });
+      this.classList.add("is-active");
+
+      // Filter event cards if in events tab
+      if (activeContent && filter !== "all") {
+        var eventCards = $$(".event-card", activeContent);
+        eventCards.forEach(function (card) {
+          var cardCategory = card.getAttribute("data-category");
+          card.style.display = (cardCategory === filter) ? "block" : "none";
+        });
+      } else if (activeContent) {
+        // Show all cards
+        var allCards = $$(".event-card", activeContent);
+        allCards.forEach(function (card) {
+          card.style.display = "block";
+        });
+      }
+    });
+  });
+
   /* ---------- enquiry form now handled by MS Forms ---------- */
 })();
