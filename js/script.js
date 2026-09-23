@@ -92,35 +92,38 @@
     });
   }
 
-  /* ---------- destination filter ---------- */
-  var filters = $$(".filter");
-  var cards = $$("#destinationGrid .card");
-  var emptyMsg = $("#gridEmpty");
+  /* ---------- card grid filters (destinations, visas, ...) ---------- */
+  $$(".filters").forEach(function (group) {
+    var filters = $$(".filter", group);
+    var scope = group.parentElement || document;
+    var cards = $$(".cards .card", scope);
+    var emptyMsg = scope.querySelector(".grid-empty");
 
-  filters.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var region = btn.dataset.filter;
+    filters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var region = btn.dataset.filter;
 
-      filters.forEach(function (b) {
-        var active = b === btn;
-        b.classList.toggle("is-active", active);
-        b.setAttribute("aria-pressed", String(active));
+        filters.forEach(function (b) {
+          var active = b === btn;
+          b.classList.toggle("is-active", active);
+          b.setAttribute("aria-pressed", String(active));
+        });
+
+        var shown = 0;
+        cards.forEach(function (card) {
+          var match = region === "all" || card.dataset.region === region;
+          card.classList.toggle("is-hidden", !match);
+          if (match) {
+            shown++;
+            // replay the reveal so filtered-in cards animate back
+            card.classList.remove("is-visible");
+            void card.offsetWidth;
+            card.classList.add("is-visible");
+          }
+        });
+
+        if (emptyMsg) emptyMsg.hidden = shown !== 0;
       });
-
-      var shown = 0;
-      cards.forEach(function (card) {
-        var match = region === "all" || card.dataset.region === region;
-        card.classList.toggle("is-hidden", !match);
-        if (match) {
-          shown++;
-          // replay the reveal so filtered-in cards animate back
-          card.classList.remove("is-visible");
-          void card.offsetWidth;
-          card.classList.add("is-visible");
-        }
-      });
-
-      if (emptyMsg) emptyMsg.hidden = shown !== 0;
     });
   });
 
