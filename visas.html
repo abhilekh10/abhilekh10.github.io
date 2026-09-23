@@ -1,102 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GLWXZ9MCN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visa Services & Requirements for 50+ Destinations | Bookbindass</title>
+  <meta name="description" content="Complete visa services for 50+ countries with visa pricing, processing times, and travel requirements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --ink-900: #0f1419; --ink-600: #4a5a6a; --sand-200: #e8e6e1; --sand-100: #f5f3f0; --accent-teal: #2d7a8a; --orange-500: #ff8c42; --white: #ffffff; --gray-200: #f0f0f0; --gray-400: #999999; }
+    body { font-family: 'Work Sans', sans-serif; background: linear-gradient(135deg, #f5f3f0 0%, #e8e6e1 100%); color: var(--ink-900); }
+    
+    /* ===== HEADER STYLING WITH SCROLL STATES ===== */
+    .site-header {
+      background: rgba(251, 250, 255, .95);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 0 #e8e6e1, 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(14px);
+    }
 
-  gtag('config', 'G-9GLWXZ9MCN');
-</script>
+    /* Sticky state - when scrolled down */
+    .site-header.is-stuck {
+      background: rgba(251, 250, 255, .95);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 1px 0 #e8e6e1, 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Visa Services — 88 Destinations, One Application | Bookbindass</title>
-<meta name="description" content="Visa services for 88 destinations worldwide, handled end to end — document checklist, form filling, appointment and follow-up, managed by one point of contact." />
-<meta name="theme-color" content="#26186e" />
-<link rel="canonical" href="https://bookbindass.com/visas.html" />
+    .site-header.is-stuck .brand-tag {
+      color: rgba(38, 24, 110, 0.7);
+    }
 
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bookbindass.com/visas.html" />
-<meta property="og:site_name" content="Bookbindass" />
-<meta property="og:locale" content="en_IN" />
-<meta property="og:title" content="Visa Services — 88 Destinations, One Application | Bookbindass" />
-<meta property="og:description" content="Visa services for 88 destinations worldwide, handled end to end — document checklist, form filling, appointment and follow-up, managed by one point of contact." />
-<meta property="og:image" content="https://bookbindass.com/images/hero.jpg" />
-<meta property="og:image:width" content="1920" />
-<meta property="og:image:height" content="1080" />
+    .site-header.is-stuck .nav a {
+      color: #0f1419;
+    }
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Visa Services — 88 Destinations, One Application | Bookbindass" />
-<meta name="twitter:description" content="Visa services for 88 destinations worldwide, handled end to end — document checklist, form filling, appointment and follow-up, managed by one point of contact." />
-<meta name="twitter:image" content="https://bookbindass.com/images/hero.jpg" />
+    .site-header.is-stuck .nav a:hover {
+      opacity: 0.6;
+    }
 
-<link rel="icon" type="image/png" href="images/favicon.png" />
-<link rel="apple-touch-icon" href="images/favicon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+    .site-header.is-stuck .nav-call {
+      border-color: #0f1419;
+      color: #0f1419;
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bookbindass.com/"},
-    {"@type": "ListItem", "position": 2, "name": "Visas", "item": "https://bookbindass.com/visas.html"}
-  ]
-}
-</script>
+    .site-header.is-stuck .nav-call:hover {
+      background: rgba(15, 20, 25, 0.1);
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How many visa destinations do you cover?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We provide visa services for 88 destinations worldwide. Our expertise spans all major regions including Middle East, Asia & Far East, Europe, and Americas."
+    .site-header.is-stuck .nav-cta {
+      background: #ff8c42;
+      color: white;
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      background: transparent;
+      border-radius: 12px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .brand-mark img {
+      height: 40px;
+      width: auto;
+    }
+
+    .brand-tag {
+      color: rgba(38, 24, 110, 0.7);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      justify-content: flex-end;
+      transition: all 0.3s ease;
+    }
+
+    .nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #0f1419;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: opacity 0.3s;
+    }
+
+    .nav a:hover {
+      opacity: 0.6;
+    }
+
+    .nav-call, .nav-cta {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .nav-call {
+      border: 2px solid #0f1419;
+      color: #0f1419;
+      background: transparent;
+    }
+
+    .nav-call:hover {
+      background: rgba(15, 20, 25, 0.1);
+    }
+
+    .nav-cta {
+      background: #ff8c42;
+      color: white;
+    }
+
+    .nav-cta:hover {
+      background: #ff7a1f;
+      transform: translateY(-2px);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What is included in your visa service?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our visa services include: complete document checklist, form filling assistance, appointment scheduling, embassy follow-up, and end-to-end management by a single point of contact for complete discretion."
+      .nav-toggle {
+        display: flex;
       }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does visa processing take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Processing time varies by destination and visa type. We offer regular, expedited, and rush processing options. The exact timeline is confirmed in writing before you commit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I get a quote for visa fees?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Visa fees vary based on destination, visa type, and embassy fees which change frequently. We provide indicative starting prices, and confirm the final cost in writing before payment. Destinations marked 'Get a quote' have variable fees."
+      .header-inner {
+        gap: 20px;
       }
     }
-  ]
-}
-</script>
+    /* ===== END HEADER STYLING =====*/
+    
+    .hero { background: linear-gradient(135deg, var(--accent-teal) 0%, #1a4f5e 100%); color: var(--white); padding: 60px 20px; text-align: center; }
+    .hero h1 { font-family: 'Fraunces', serif; font-size: 2.8rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.1rem; opacity: 0.95; max-width: 700px; margin: 0 auto; }
+    
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 60px 0; }
+    
+    /* Region Filters */
+    .region-filters { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 50px; padding: 30px 0; }
+    .filter-btn { padding: 12px 28px; background: var(--white); border: 2px solid var(--accent-teal); color: var(--accent-teal); border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s; font-size: 0.95rem; }
+    .filter-btn:hover, .filter-btn.active { background: var(--accent-teal); color: var(--white); }
+    
+    /* Visa Cards Grid */
+    .visa-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+    .visa-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; height: 100%; cursor: pointer; }
+    .visa-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    
+    .visa-card-header { padding: 25px 20px; background: linear-gradient(135deg, var(--accent-teal) 0%, #1a4f5e 100%); color: var(--white); text-align: center; }
+    .visa-flag { font-size: 3rem; margin-bottom: 10px; }
+    .visa-country { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 5px; }
+    .visa-type { font-size: 0.85rem; opacity: 0.9; font-weight: 600; }
+    
+    .visa-card-body { padding: 20px; flex-grow: 1; }
+    .price-section { margin-bottom: 15px; }
+    .price-label { font-size: 0.8rem; color: var(--gray-400); text-transform: uppercase; font-weight: 600; }
+    .price { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 700; color: var(--accent-teal); }
+    .price-sub { font-size: 0.85rem; color: var(--gray-400); }
+    
+    .visa-info { font-size: 0.9rem; color: var(--ink-600); line-height: 1.6; margin-bottom: 15px; }
+    .info-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--sand-200); }
+    .info-item:last-child { border-bottom: none; }
+    
+    .apply-btn { display: block; width: 100%; padding: 12px; background: linear-gradient(135deg, var(--accent-teal) 0%, #1a4f5e 100%); color: var(--white); text-decoration: none; border-radius: 6px; text-align: center; font-weight: 600; transition: transform 0.2s; border: none; cursor: pointer; font-family: 'Work Sans', sans-serif; font-size: 0.95rem; }
+    .apply-btn:hover { transform: scale(1.02); }
+    
+    footer { background: var(--ink-900); color: var(--white); padding: 40px 20px; text-align: center; margin-top: 60px; }
+    
+    @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .visa-cards { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; } }
+    
+    .hidden { display: none; }
+  </style>
 </head>
 <body>
-
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-header is-stuck" id="siteHeader">
+  <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="bookbindass.com — home">
       <span class="brand-mark"><img src="images/logo.png" alt="bookbindass.com" width="826" height="202" /></span>
@@ -106,10 +244,10 @@
     <nav class="nav" id="nav" aria-label="Primary">
       <ul>
         <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="visas.html" class="is-current" aria-current="page">Visas</a></li>
-        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="visas.html">Visas</a></li>
+        <li><a href="#how" class="nav-link">How it works</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="index.html#stories">Stories</a></li>
+        <li><a href="#stories" class="nav-link">Stories</a></li>
         <li><a href="contact.html#bank">Pay</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
@@ -123,222 +261,190 @@
   </div>
 </header>
 
-<main id="main">
-
-  <!-- ============ VISAS ============ -->
-  <section class="section visas" id="visas">
-    <div class="wrap">
-      <header class="section-head reveal">
-        <h1 class="section-title">Visa Services Worldwide</h1>
-        <p class="eyebrow">Visa services</p>
-        <h2 class="section-title">Apply for your visa with us</h2>
-        <p class="section-sub">88 destinations, handled quietly and completely: document checklist, form filling,
-          appointment and follow-up, managed by one point of contact. Fees below are indicative starting prices —
-          the final cost depends on visa type, processing speed and embassy fee changes, and we confirm it in
-          writing before you pay anything. Destinations marked &ldquo;Get a quote&rdquo; have fees that vary too
-          much to quote a fixed number up front.</p>
-      </header>
-
-      <div class="tabs reveal" id="visaTabs">
-        <div class="tablist" role="tablist" aria-label="Visa destinations">
-          <button class="tab is-active" role="tab" id="tab-me" aria-selected="true"
-                  aria-controls="panel-me">Middle East</button>
-          <button class="tab" role="tab" id="tab-asia" aria-selected="false" tabindex="-1"
-                  aria-controls="panel-asia">Asia &amp; Far East</button>
-          <button class="tab" role="tab" id="tab-europe" aria-selected="false" tabindex="-1"
-                  aria-controls="panel-europe">Europe</button>
-          <button class="tab" role="tab" id="tab-americas" aria-selected="false" tabindex="-1"
-                  aria-controls="panel-americas">Americas</button>
-          <button class="tab" role="tab" id="tab-africa" aria-selected="false" tabindex="-1"
-                  aria-controls="panel-africa">Africa</button>
-          <button class="tab" role="tab" id="tab-oceania" aria-selected="false" tabindex="-1"
-                  aria-controls="panel-oceania">Oceania &amp; Pacific</button>
-        </div>
-
-        <div class="tabpanel" role="tabpanel" id="panel-me" aria-labelledby="tab-me" tabindex="0">
-          <ul class="visa-list">
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇦🇪</span>Dubai &middot; UAE</h3><p>Tourist visa</p></div><p class="visa-price">from <strong>₹2,900</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇶🇦</span>Qatar</h3><p>Tourist visa</p></div><p class="visa-price">from <strong>₹10,999</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇸🇦</span>Saudi Arabia</h3><p>Tourist visa</p></div><p class="visa-price">from <strong>₹19,900</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇴🇲</span>Oman</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹2,818</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇧🇭</span>Bahrain</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹5,385</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇯🇴</span>Jordan</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹7,866</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇰🇼</span>Kuwait</h3><p>Tourist e-visa</p></div><p class="visa-price">Get a quote</p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇱🇧</span>Lebanon</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹14,270</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇮🇱</span>Israel</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹10,370</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-          </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="panel-asia" aria-labelledby="tab-asia" tabindex="0" hidden>
-          <ul class="visa-list">
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇱🇰</span>Sri Lanka</h3><p>Tourist visa</p></div><p class="visa-price">from <strong>₹3,100</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇾</span>Malaysia</h3><p>Tourist visa</p></div><p class="visa-price">from <strong>₹4,699</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇨🇳</span>China</h3><p>Tourist visa</p></div><p class="visa-price">from <strong>₹10,000</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇹🇭</span>Thailand</h3><p>Tourist e-visa</p></div><p class="visa-price">Get a quote</p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇻🇳</span>Vietnam</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹4,370</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇮🇩</span>Indonesia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹3,450</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇭🇰</span>Hong Kong</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹1,175</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇯🇵</span>Japan</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹4,200</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇰🇷</span>South Korea</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹10,015</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇰🇭</span>Cambodia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹4,525</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇲</span>Myanmar</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹9,763</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇱🇦</span>Laos</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹7,216</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇵🇭</span>Philippines</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹8,010</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇧🇳</span>Brunei</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹3,950</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇹🇼</span>Taiwan</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹1,180</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇳</span>Mongolia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹1,494</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇧🇩</span>Bangladesh</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹2,599</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇧🇹</span>Bhutan</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹22,150</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇻</span>Maldives</h3><p>Tourist e-visa</p></div><p class="visa-price">Get a quote</p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇺🇿</span>Uzbekistan</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹3,212</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇰🇬</span>Kyrgyzstan</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹17,422</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇹🇯</span>Tajikistan</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹7,180</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇦🇲</span>Armenia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹1,921</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇦🇿</span>Azerbaijan</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹5,360</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇬🇪</span>Georgia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹5,910</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-          </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="panel-europe" aria-labelledby="tab-europe" tabindex="0" hidden>
-          <ul class="visa-list">
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇬🇧</span>United Kingdom</h3><p>Visitor visa</p></div><p class="visa-price">from <strong>₹5,899</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🌐</span>Schengen area</h3><p>Covers 29 countries incl. France, Germany, Italy, Spain &amp; Switzerland — one sticker visa</p></div><p class="visa-price">from <strong>₹5,900</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇮🇪</span>Ireland</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹14,746</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇹🇷</span>T&uuml;rkiye</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹8,390</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇷🇺</span>Russia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹10,420</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-          </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="panel-americas" aria-labelledby="tab-americas" tabindex="0" hidden>
-          <ul class="visa-list">
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇺🇸</span>USA</h3><p>B1/B2 visitor visa</p></div><p class="visa-price">from <strong>₹16,200</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇨🇦</span>Canada</h3><p>Visitor visa</p></div><p class="visa-price">from <strong>₹16,000</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇽</span>Mexico</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹5,900</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇧🇷</span>Brazil</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹5,310</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇦🇷</span>Argentina</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹7,670</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇪🇨</span>Ecuador</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹9,670</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇨🇴</span>Colombia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹21,240</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇨🇺</span>Cuba</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹8,322</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇩🇴</span>Dominican Republic</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹8,900</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇧🇸</span>Bahamas</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹27,181</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇦🇬</span>Antigua &amp; Barbuda</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹22,750</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇻🇪</span>Venezuela</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹22,570</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-          </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="panel-africa" aria-labelledby="tab-africa" tabindex="0" hidden>
-          <ul class="visa-list">
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇹🇿</span>Tanzania</h3><p>Tourist visa</p></div><p class="visa-price">from <strong>₹7,500</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇪🇬</span>Egypt</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹4,416</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇰🇪</span>Kenya</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹4,975</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇦</span>Morocco</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹12,480</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇪🇹</span>Ethiopia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹9,690</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇿🇦</span>South Africa</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹6,578</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇺🇬</span>Uganda</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹8,640</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇸🇨</span>Seychelles</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹2,262</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇺</span>Mauritius</h3><p>Tourist e-visa</p></div><p class="visa-price">Get a quote</p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇬</span>Madagascar</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹2,180</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇼</span>Malawi</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹7,950</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇿🇲</span>Zambia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹7,216</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇿🇼</span>Zimbabwe</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹5,860</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇹🇳</span>Tunisia</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹10,260</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇹🇬</span>Togo</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹8,040</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇩🇯</span>Djibouti</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹4,168</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇨🇲</span>Cameroon</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹25,760</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇧🇯</span>Benin</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹12,748</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇬🇦</span>Gabon</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹14,030</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇬🇳</span>Guinea</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹12,820</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇳🇦</span>Namibia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹12,372</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇸🇴</span>Somalia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹9,772</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇱🇷</span>Liberia</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹13,740</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇹🇩</span>Chad</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹13,960</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇨🇮</span>C&ocirc;te d&rsquo;Ivoire</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹15,715</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇸🇸</span>South Sudan</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹15,565</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇬🇶</span>Equatorial Guinea</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹15,800</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇲🇿</span>Mozambique</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹21,160</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇩🇿</span>Algeria</h3><p>Sticker visa</p></div><p class="visa-price">from <strong>₹19,220</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇧🇫</span>Burkina Faso</h3><p>Tourist e-visa</p></div><p class="visa-price">Get a quote</p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇬🇭</span>Ghana</h3><p>Sticker visa</p></div><p class="visa-price">Get a quote</p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇨🇩</span>Congo &ndash; Kinshasa</h3><p>Tourist e-visa</p></div><p class="visa-price">Get a quote</p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇳🇬</span>Nigeria</h3><p>Tourist e-visa</p></div><p class="visa-price">Get a quote</p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-          </ul>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="panel-oceania" aria-labelledby="tab-oceania" tabindex="0" hidden>
-          <ul class="visa-list">
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇦🇺</span>Australia</h3><p>Visitor visa</p></div><p class="visa-price">from <strong>₹13,500</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇳🇿</span>New Zealand</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹30,891</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇵🇬</span>Papua New Guinea</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹8,490</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-            <li class="visa"><div><h3><span class="visa-flag" aria-hidden="true">🇸🇧</span>Solomon Islands</h3><p>Tourist e-visa</p></div><p class="visa-price">from <strong>₹13,440</strong></p><a class="visa-cta" href="contact.html#plan">Apply</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="visa-help reveal">
-        Not sure which visa you need? Talk to our team or WhatsApp
-        <a href="https://wa.me/919129888888">+91 91298 88888</a> /
-        <a href="https://wa.me/917384848484">+91 73848 48484</a>. Don&rsquo;t see your destination listed —
-        we likely still cover it; ask us.
-      </p>
-    </div>
+  <section class="hero">
+    <h1>Visa Services for 50+ Countries</h1>
+    <p>Complete visa solutions with competitive pricing, fast processing, and expert guidance for your global travels</p>
   </section>
 
-</main>
+  <main>
+    <section class="section wrap">
+      <!-- Region Filters -->
+      <div class="region-filters">
+        <button class="filter-btn active" data-region="all">All Countries</button>
+        <button class="filter-btn" data-region="middle-east">Middle East</button>
+        <button class="filter-btn" data-region="asia-far-east">Asia & Far East</button>
+        <button class="filter-btn" data-region="europe">Europe</button>
+        <button class="filter-btn" data-region="americas">Americas</button>
+        <button class="filter-btn" data-region="africa">Africa</button>
+        <button class="filter-btn" data-region="oceania">Oceania & Pacific</button>
+      </div>
 
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-brand">
-      <a class="brand" href="index.html">
-        <span class="brand-mark"><img src="images/logo.png" alt="bookbindass.com" width="826" height="202" /></span>
-        <span class="brand-tag">bespoke holidays</span>
-      </a>
-      <p>Bespoke holidays and private events, planned with complete discretion — for travellers who expect more than a package tour.</p>
-    </div>
+      <!-- Visa Cards Grid -->
+      <div class="visa-cards" id="visaCardsContainer">
+        <!-- Cards will be generated by JavaScript -->
+      </div>
+    </section>
 
-    <nav class="footer-col" aria-label="Destinations">
-      <h3>Destinations</h3>
-      <ul>
-        <li><a href="destinations.html#dest-maldives">Maldives</a></li>
-        <li><a href="destinations.html#dest-santorini">Santorini</a></li>
-        <li><a href="destinations.html#dest-kerala">Kerala</a></li>
-        <li><a href="destinations.html#dest-kashmir">Kashmir</a></li>
-        <li><a href="visas.html">Visa services</a></li>
-      </ul>
-    </nav>
+    <!-- CTA Section -->
+    <section class="wrap" style="text-align: center; padding: 80px 0;">
+      <h2 style="font-family: 'Fraunces', serif; font-size: 2.2rem; margin-bottom: 20px;">Need Visa Assistance?</h2>
+      <p style="font-size: 1.1rem; color: var(--ink-600); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Our expert team handles visa applications for 50+ countries. Get consultation, document preparation, and fast-track processing.
+      </p>
+      <a href="contact.html#plan" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, var(--accent-teal) 0%, #1a4f5e 100%); color: var(--white); text-decoration: none; border-radius: 4px; font-weight: 700; font-size: 1.1rem;">Get Visa Assistance</a>
+    </section>
+  </main>
 
-    <nav class="footer-col" aria-label="Company">
-      <h3>Company</h3>
-      <ul>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="index.html#why">Why book with us</a></li>
-        <li><a href="index.html#how">How it works</a></li>
-        <li><a href="events.html">Events &amp; artists</a></li>
-        <li><a href="index.html#stories">Traveller stories</a></li>
-        <li><a href="contact.html#bank">Bank details</a></li>
-      </ul>
-    </nav>
+  <footer>
+    <p>&copy; 2024 Bookbindass Visa Services. For latest visa information, check official embassy websites.</p>
+  </footer>
 
-    <div class="footer-col">
-      <h3>Get in touch</h3>
-      <ul>
-        <li><a href="https://wa.me/919129888888">+91 91298 88888</a></li>
-        <li><a href="https://wa.me/917384848484">+91 73848 48484</a></li>
-        <li><a href="mailto:contact@bookbindass.com">contact@bookbindass.com</a></li>
-        <li><a href="https://wa.me/919129888888">WhatsApp</a></li>
-        <li><a href="https://www.instagram.com/book.bindass" target="_blank" rel="noopener">Instagram</a></li>
-        <li class="footer-address"><a href="https://maps.google.com/?q=B+Block+Aerocity+Mohali" target="_blank" rel="noopener">B Block Aerocity, Mohali, Punjab 160071</a></li>
-      </ul>
-    </div>
-  </div>
+  <script>
+    const visaData = [
+      // Middle East
+      { name: "Dubai, UAE", flag: "🇦🇪", code: "ae", region: "middle-east", type: "Tourist e-visa", price: "₹2,900", time: "1-3 Days", link: "visa-dubai.html" },
+      { name: "Qatar", flag: "🇶🇦", code: "qa", region: "middle-east", type: "Tourist visa", price: "₹10,999", time: "2-4 Weeks", link: "visa-qatar.html" },
+      { name: "Saudi Arabia", flag: "🇸🇦", code: "sa", region: "middle-east", type: "Tourist e-visa", price: "₹19,900", time: "1-2 Days", link: "visa-saudi.html" },
+      { name: "Bahrain", flag: "🇧🇭", code: "bh", region: "middle-east", type: "Tourist e-visa", price: "₹5,385", time: "1-2 Days", link: "visa-bahrain.html" },
+      { name: "Oman", flag: "🇴🇲", code: "om", region: "middle-east", type: "Tourist e-visa", price: "₹2,818", time: "1-2 Days", link: "visa-oman.html" },
+      { name: "Jordan", flag: "🇯🇴", code: "jo", region: "middle-east", type: "Tourist e-visa", price: "₹7,866", time: "2-3 Days", link: "visa-jordan.html" },
+      { name: "Kuwait", flag: "🇰🇼", code: "kw", region: "middle-east", type: "Tourist e-visa", price: "Get Quote", time: "3-5 Days", link: "visa-kuwait.html" },
+      { name: "Lebanon", flag: "🇱🇧", code: "lb", region: "middle-east", type: "Sticker visa", price: "₹14,270", time: "2-4 Weeks", link: "visa-lebanon.html" },
+      { name: "Israel", flag: "🇮🇱", code: "il", region: "middle-east", type: "Tourist e-visa", price: "₹10,370", time: "3-5 Days", link: "visa-israel.html" },
+      { name: "Turkey", flag: "🇹🇷", code: "tr", region: "middle-east", type: "Tourist e-visa", price: "₹1,500", time: "5 mins", link: "visa-turkey.html" },
+      
+      // Asia & Far East
+      { name: "Japan", flag: "🇯🇵", code: "jp", region: "asia-far-east", type: "Tourist visa", price: "₹3,500", time: "4-7 Days", link: "visa-kyoto.html" },
+      { name: "Thailand", flag: "🇹🇭", code: "th", region: "asia-far-east", type: "Tourist visa", price: "₹6,000", time: "3-5 Days", link: "visa-thailand.html" },
+      { name: "Vietnam", flag: "🇻🇳", code: "vn", region: "asia-far-east", type: "Tourist e-visa", price: "₹2,500", time: "3 Days", link: "visa-vietnam.html" },
+      { name: "Malaysia", flag: "🇲🇾", code: "my", region: "asia-far-east", type: "Tourist visa", price: "₹2,000", time: "5-7 Days", link: "visa-malaysia.html" },
+      { name: "Singapore", flag: "🇸🇬", code: "sg", region: "asia-far-east", type: "Tourist visa", price: "₹2,500", time: "5-7 Days", link: "visa-singapore.html" },
+      { name: "Indonesia", flag: "🇮🇩", code: "id", region: "asia-far-east", type: "Tourist visa on arrival", price: "₹1,600", time: "On Arrival", link: "visa-indonesia.html" },
+      { name: "Philippines", flag: "🇵🇭", code: "ph", region: "asia-far-east", type: "Tourist visa", price: "₹4,500", time: "5-7 Days", link: "visa-philippines.html" },
+      { name: "South Korea", flag: "🇰🇷", code: "kr", region: "asia-far-east", type: "Tourist visa", price: "₹5,000", time: "2-4 Days", link: "visa-korea.html" },
+      { name: "China", flag: "🇨🇳", code: "cn", region: "asia-far-east", type: "Tourist visa", price: "₹10,000", time: "4-7 Days", link: "visa-china.html" },
+      { name: "Hong Kong", flag: "🇭🇰", code: "hk", region: "asia-far-east", type: "Visa-free for 180 days", price: "Free", time: "Visa-free", link: "visa-hongkong.html" },
+      { name: "Sri Lanka", flag: "🇱🇰", code: "lk", region: "asia-far-east", type: "Tourist e-visa", price: "₹4,000", time: "1-2 Days", link: "visa-srilanka.html" },
+      { name: "India", flag: "🇮🇳", code: "in", region: "asia-far-east", type: "Domestic travel", price: "Free", time: "N/A", link: "visa-udaipur.html" },
+      
+      // Europe
+      { name: "Greece", flag: "🇬🇷", code: "gr", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-santorini.html" },
+      { name: "Italy", flag: "🇮🇹", code: "it", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-amalfi.html" },
+      { name: "Switzerland", flag: "🇨🇭", code: "ch", region: "europe", type: "Schengen visa", price: "€95", time: "2-4 Weeks", link: "visa-alps.html" },
+      { name: "France", flag: "🇫🇷", code: "fr", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-france.html" },
+      { name: "Germany", flag: "🇩🇪", code: "de", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-germany.html" },
+      { name: "Spain", flag: "🇪🇸", code: "es", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-spain.html" },
+      { name: "Portugal", flag: "🇵🇹", code: "pt", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-portugal.html" },
+      { name: "Netherlands", flag: "🇳🇱", code: "nl", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-netherlands.html" },
+      { name: "Belgium", flag: "🇧🇪", code: "be", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-belgium.html" },
+      { name: "Poland", flag: "🇵🇱", code: "pl", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-poland.html" },
+      { name: "Czech Republic", flag: "🇨🇿", code: "cz", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-czechia.html" },
+      { name: "Austria", flag: "🇦🇹", code: "at", region: "europe", type: "Schengen visa", price: "€80", time: "2-4 Weeks", link: "visa-austria.html" },
+      { name: "UK", flag: "🇬🇧", code: "uk", region: "europe", type: "Standard Visitor Visa", price: "₹13,900", time: "3-4 Weeks", link: "visa-uk.html" },
+      
+      // Americas
+      { name: "USA", flag: "🇺🇸", code: "us", region: "americas", type: "B-1/B-2 Visa", price: "₹16,000", time: "4-6 Weeks", link: "visa-usa.html" },
+      { name: "Canada", flag: "🇨🇦", code: "ca", region: "americas", type: "Visitor Visa", price: "₹12,000", time: "2-4 Weeks", link: "visa-canada.html" },
+      { name: "Mexico", flag: "🇲🇽", code: "mx", region: "americas", type: "Temporary resident visa", price: "₹8,000", time: "3-5 Days", link: "visa-mexico.html" },
+      { name: "Brazil", flag: "🇧🇷", code: "br", region: "americas", type: "Tourist visa", price: "₹15,000", time: "5-7 Days", link: "visa-brazil.html" },
+      { name: "Argentina", flag: "🇦🇷", code: "ar", region: "americas", type: "Tourist visa", price: "₹8,000", time: "3-5 Days", link: "visa-argentina.html" },
+      { name: "Colombia", flag: "🇨🇴", code: "co", region: "americas", type: "Tourist stamp", price: "Free", time: "On Arrival", link: "visa-colombia.html" },
+      { name: "Chile", flag: "🇨🇱", code: "cl", region: "americas", type: "Tourist stamp", price: "Free", time: "On Arrival", link: "visa-chile.html" },
+      { name: "Peru", flag: "🇵🇪", code: "pe", region: "americas", type: "Tourist stamp", price: "Free", time: "On Arrival", link: "visa-peru.html" },
+      
+      // Africa
+      { name: "Egypt", flag: "🇪🇬", code: "eg", region: "africa", type: "Tourist visa on arrival", price: "₹3,500", time: "On Arrival", link: "visa-egypt.html" },
+      { name: "South Africa", flag: "🇿🇦", code: "za", region: "africa", type: "Tourist visa", price: "₹6,000", time: "5-7 Days", link: "visa-southafrica.html" },
+      { name: "Morocco", flag: "🇲🇦", code: "ma", region: "africa", type: "Visa-free for 90 days", price: "Free", time: "Visa-free", link: "visa-morocco.html" },
+      { name: "Tunisia", flag: "🇹🇳", code: "tn", region: "africa", type: "Visa-free for 90 days", price: "Free", time: "Visa-free", link: "visa-tunisia.html" },
+      { name: "Kenya", flag: "🇰🇪", code: "ke", region: "africa", type: "Tourist e-visa", price: "₹4,500", time: "3 Days", link: "visa-kenya.html" },
+      { name: "Tanzania", flag: "🇹🇿", code: "tz", region: "africa", type: "Tourist visa on arrival", price: "₹5,000", time: "On Arrival", link: "visa-tanzania.html" },
+      
+      // Oceania & Pacific
+      { name: "Bora Bora, French Polynesia", flag: "🇵🇫", code: "pf", region: "oceania", type: "Visa-free for 90 days", price: "Free", time: "Visa-free", link: "visa-borabora.html" },
+      { name: "Australia", flag: "🇦🇺", code: "au", region: "oceania", type: "eVisitor (ETA)", price: "₹7,200", time: "Instant", link: "visa-australia.html" },
+      { name: "New Zealand", flag: "🇳🇿", code: "nz", region: "oceania", type: "Tourist visa", price: "₹6,000", time: "5-7 Days", link: "visa-newzealand.html" },
+      { name: "Fiji", flag: "🇫🇯", code: "fj", region: "oceania", type: "Visa-free for 4 months", price: "Free", time: "Visa-free", link: "visa-fiji.html" },
+      { name: "Maldives", flag: "🇲🇻", code: "mv", region: "oceania", type: "Visa on Arrival", price: "Free", time: "1-3 Days", link: "visa-maldives.html" },
+      { name: "Seychelles", flag: "🇸🇨", code: "sc", region: "oceania", type: "Visa on Arrival", price: "Free", time: "1-2 Days", link: "visa-seychelles.html" },
+    ];
 
-  <div class="wrap footer-base">
-    <p>&copy; <span id="year">2026</span> bookbindass.com — All rights reserved.</p>
-    <p>Prices are indicative, per person on twin sharing, and confirmed at the time of booking.</p>
-  </div>
-</footer>
+    const container = document.getElementById('visaCardsContainer');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    let currentFilter = 'all';
 
-<a class="whatsapp-fab" href="https://wa.me/917384848484" aria-label="Chat with us on WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.87 9.87 0 0 0 4.74 1.2c5.46 0 9.9-4.43 9.9-9.9S17.5 2 12.04 2Zm0 18.05c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.15.82.84-3.06-.2-.32a8.14 8.14 0 0 1-1.25-4.35 8.16 8.16 0 1 1 8.31 8.25Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.09-.39-.13-.55.12s-.64.8-.78.97c-.14.16-.29.18-.53.06a6.65 6.65 0 0 1-3.32-2.9c-.25-.44.25-.4.71-1.35.08-.16.04-.3-.02-.42-.06-.13-.55-1.33-.76-1.82-.2-.47-.4-.4-.55-.41h-.47c-.16 0-.42.06-.64.3-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64 1.53.66 2.13.72 2.9.6.46-.06 1.46-.6 1.66-1.17.21-.58.21-1.07.15-1.17-.06-.11-.22-.17-.47-.29Z"/></svg>
-  <span>Let's chat</span>
-</a>
+    function renderCards(filter = 'all') {
+      container.innerHTML = '';
+      const filtered = filter === 'all' ? visaData : visaData.filter(v => v.region === filter);
+      
+      filtered.forEach(visa => {
+        const card = document.createElement('div');
+        card.className = 'visa-card';
+        card.onclick = () => window.location.href = visa.link;
+        card.innerHTML = `
+          <div class="visa-card-header">
+            <div class="visa-flag">${visa.flag}</div>
+            <div class="visa-country">${visa.name}</div>
+            <div class="visa-type">${visa.type}</div>
+          </div>
+          <div class="visa-card-body">
+            <div class="price-section">
+              <div class="price-label">from</div>
+              <div class="price">${visa.price}</div>
+              <div class="price-sub">Processing: ${visa.time}</div>
+            </div>
+            <div class="visa-info">
+              <div class="info-item">
+                <span>Visa Type:</span>
+                <strong>${visa.type}</strong>
+              </div>
+              <div class="info-item">
+                <span>Time:</span>
+                <strong>${visa.time}</strong>
+              </div>
+            </div>
+            <button class="apply-btn">View Details & Apply</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
 
-<button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.region;
+        renderCards(currentFilter);
+      });
+    });
 
-<script src="js/script.js" defer></script>
+    // Initial render
+    renderCards();
+
+    // Sticky header scroll behavior
+    (function () {
+      var header = document.getElementById("siteHeader");
+
+      function onScroll() {
+        var y = window.scrollY;
+        var threshold = 20;
+        if (header) {
+          header.classList.toggle("is-stuck", y > threshold);
+        }
+      }
+
+      var ticking = false;
+      window.addEventListener("scroll", function () {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () {
+          onScroll();
+          ticking = false;
+        });
+      }, { passive: true });
+      onScroll();
+    })();
+  </script>
 </body>
 </html>

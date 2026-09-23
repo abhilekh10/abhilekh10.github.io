@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colombia Visa Requirements | Bookbindass</title>
+  <meta name="description" content="Colombia visa information for luxury holidays">
+  <meta property="og:image" content="https://picsum.photos/500/500?random=795" />
+  <meta name="twitter:image" content="https://picsum.photos/500/500?random=795" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink-900: #0f1419;
+      --ink-600: #4a5a6a;
+      --sand-200: #e8e6e1;
+      --sand-100: #f5f3f0;
+      --accent-teal: #2d7a8a;
+      --orange-500: #ff8c42;
+      --white: #ffffff;
+      --gray-200: #f0f0f0;
+      --gray-400: #999999;
+    }
+
+    body {
+      font-family: 'Work Sans', sans-serif;
+      background: #fbfaff;
+      min-height: 100vh;
+      color: var(--ink-900);
+    }
+
+    header {
+      background: var(--white);
+      padding: 20px 0;
+      border-bottom: 1px solid var(--sand-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink-900);
+    }
+
+    .logo span {
+      color: var(--orange-500);
+    }
+
+    .visa-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 40px;
+      min-height: calc(100vh - 100px);
+    }
+
+    .visa-ticket {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+    }
+
+    .ticket-header {
+      background: linear-gradient(135deg, #FFCD00 0%, #CC9900 100%);
+      color: var(--white);
+      padding: 30px;
+      position: relative;
+    }
+
+    .ticket-header::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+      height: 30px;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 10px,
+        rgba(0,0,0,0.1) 10px,
+        rgba(0,0,0,0.1) 20px
+      );
+    }
+
+    .destination-code {
+      font-family: 'Fraunces', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .destination-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      opacity: 0.9;
+    }
+
+    .ticket-body {
+      padding: 40px 30px;
+      flex: 1;
+    }
+
+    .divider {
+      border-top: 2px dashed var(--sand-200);
+      margin: 30px 0;
+      position: relative;
+    }
+
+    .divider-label {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--white);
+      padding: 0 15px;
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .visa-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      border-left: 3px solid var(--accent-teal);
+      padding-left: 20px;
+    }
+
+    .info-label {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .info-value {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink-900);
+    }
+
+    .info-detail {
+      font-size: 0.9rem;
+      color: var(--ink-600);
+      margin-top: 5px;
+    }
+
+    .details-section {
+      margin: 30px 0;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ink-900);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--accent-teal);
+      margin-right: 12px;
+      border-radius: 2px;
+    }
+
+    .details-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .details-list li {
+      padding: 12px 0;
+      padding-left: 25px;
+      position: relative;
+      color: var(--ink-600);
+      line-height: 1.6;
+      border-bottom: 1px solid var(--sand-200);
+    }
+
+    .details-list li:last-child {
+      border-bottom: none;
+    }
+
+    .details-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent-teal);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .cta-panel {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+
+    .cta-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      border-left: 4px solid var(--accent-teal);
+    }
+
+    .cta-badge {
+      display: inline-block;
+      background: rgba(45, 122, 138, 0.1);
+      color: var(--accent-teal);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .cta-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink-900);
+      margin-bottom: 10px;
+    }
+
+    .cta-description {
+      font-size: 0.9rem;
+      color: var(--ink-600);
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .cta-checklist {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .cta-checklist li {
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.9rem;
+      color: var(--ink-600);
+    }
+
+    .cta-checklist li::before {
+      content: '•';
+      position: absolute;
+      left: 8px;
+      color: var(--accent-teal);
+      font-weight: bold;
+    }
+
+    .cta-button {
+      width: 100%;
+      padding: 15px 20px;
+      background: linear-gradient(135deg, var(--accent-teal) 0%, #1a4f5e 100%);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(45, 122, 138, 0.3);
+    }
+
+    .secondary-button {
+      width: 100%;
+      padding: 12px 20px;
+      background: var(--sand-100);
+      color: var(--accent-teal);
+      border: 2px solid var(--accent-teal);
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+
+    .secondary-button:hover {
+      background: var(--accent-teal);
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .visa-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .cta-panel {
+        position: static;
+      }
+      .visa-info-grid {
+        grid-template-columns: 1fr;
+      }
+      .destination-code {
+        font-size: 2.5rem;
+      }
+      .ticket-body {
+        padding: 25px 20px;
+      }
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent-teal);
+      text-decoration: none;
+      margin-bottom: 30px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--ink-900);
+    }
+
+    .back-link::before {
+      content: '←';
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+  </style>
+  <style>
+
+    /* ===== HEADER STYLING WITH SCROLL STATES ===== */
+    .site-header {
+      background: rgba(251, 250, 255, .95);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 0 #e8e6e1, 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(14px);
+    }
+    
+    /* Sticky state - when scrolled down */
+    .site-header.is-stuck {
+      background: rgba(251, 250, 255, .95);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 1px 0 #e8e6e1, 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    .site-header.is-stuck .brand-tag {
+      color: rgba(38, 24, 110, 0.7);
+    }
+    
+    .site-header.is-stuck .nav a {
+      color: #0f1419;
+    }
+    
+    .site-header.is-stuck .nav a:hover {
+      opacity: 0.6;
+    }
+    
+    .site-header.is-stuck .nav-call {
+      border-color: #0f1419;
+      color: #0f1419;
+    }
+    
+    .site-header.is-stuck .nav-call:hover {
+      background: rgba(15, 20, 25, 0.1);
+    }
+    
+    .site-header.is-stuck .nav-cta {
+      background: #ff8c42;
+      color: white;
+    }
+    
+.header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: white;
+      flex-shrink: 0;
+    }
+    
+    .brand-mark {
+      background: white;
+      border-radius: 12px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      transition: all 0.3s ease;
+    }
+    
+    .brand-mark img {
+      height: 40px;
+      width: auto;
+    }
+    
+    .brand-tag {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+    
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      justify-content: flex-end;
+      transition: all 0.3s ease;
+    }
+    
+    .nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: opacity 0.3s;
+    }
+    
+    .nav a:hover {
+      opacity: 0.8;
+    }
+    
+    .nav-call, .nav-cta {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    
+    .nav-call {
+      border: 2px solid white;
+      color: white;
+      background: transparent;
+    }
+    
+    .nav-call:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    
+    .nav-cta {
+      background: #ff8c42;
+      color: white;
+    }
+    
+    .nav-cta:hover {
+      background: #ff7a1f;
+      transform: translateY(-2px);
+    }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+      .nav-toggle {
+        display: flex;
+      }
+      .header-inner {
+        gap: 20px;
+      }
+    }
+    /* ===== END HEADER STYLING ===== */
+
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="bookbindass.com — home">
+      <span class="brand-mark"><img src="images/logo.png" alt="bookbindass.com" width="826" height="202" /></span>
+      <span class="brand-tag">bespoke holidays</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <ul>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="visas.html">Visas</a></li>
+        <li><a href="#how" class="nav-link">How it works</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="#stories" class="nav-link">Stories</a></li>
+        <li><a href="contact.html#bank">Pay</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <a class="btn btn-ghost nav-call" href="https://wa.me/919129888888">+91 91298 88888</a>
+      <a class="btn btn-primary nav-cta" href="contact.html#plan">Plan my trip</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+  <div class="visa-container">
+    <div class="visa-details">
+      <a href="visas.html" class="back-link">Back to All Visas</a>
+
+      <div class="visa-ticket">
+        <div class="ticket-header">
+          <div class="destination-code">CO</div>
+          <div class="destination-name">Colombia Visa Information</div>
+        </div>
+
+        <div class="ticket-body">
+          <div class="visa-info-grid">
+            <div class="info-item">
+              <div class="info-label">Processing Time</div>
+              <div class="info-value">2-5 Days</div>
+              <div class="info-detail">Standard processing</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Visa Fee</div>
+              <div class="info-value">Free/₹2000</div>
+              <div class="info-detail">Approximate cost</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Validity</div>
+              <div class="info-value">2 Years</div>
+              <div class="info-detail">Duration of visa</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Stay Duration</div>
+              <div class="info-value">90 Days</div>
+              <div class="info-detail">Maximum permitted stay</div>
+            </div>
+          </div>
+
+          <div class="divider">
+            <span class="divider-label">Eligibility & Requirements</span>
+          </div>
+
+          <div class="details-section">
+            <h3 class="section-title">Who Needs a Visa</h3>
+            <ul class="details-list">
+              <li>Indian citizens require visa for Colombia</li>
+              <li>Tourist card for leisure</li>
+              <li>Emerging destination in South America</li>
+              <li>Coffee and biodiversity famous</li>
+            </ul>
+          </div>
+
+          <div class="details-section">
+            <h3 class="section-title">Required Documents</h3>
+            <ul class="details-list">
+              <li>Valid passport with 1+ year validity</li>
+              <li>Completed entry form (TM/ICP)</li>
+              <li>Passport-sized photo</li>
+              <li>Hotel booking confirmation</li>
+              <li>Return flight ticket</li>
+              <li>Proof of financial means</li>
+              <li>Yellow fever vaccination (recommended)</li>
+              <li>Travel insurance (optional)</li>
+            </ul>
+          </div>
+
+          <div class="details-section">
+            <h3 class="section-title">Visa Processing</h3>
+            <ul class="details-list">
+              <li>Tourist card issued on arrival</li>
+              <li>Or apply at embassy beforehand</li>
+              <li>Processing: 2-5 working days if applying</li>
+              <li>Available at airport immigration</li>
+              <li>Very convenient process</li>
+            </ul>
+          </div>
+
+          <div class="details-section">
+            <h3 class="section-title">Important Notes</h3>
+            <ul class="details-list">
+              <li>Colombia emerging tourism destination</li>
+              <li>Cartagena historic and beautiful</li>
+              <li>Coffee region world-famous</li>
+              <li>Tourist card 90 days stay</li>
+              <li>Cannot work on tourist card</li>
+              <li>Very welcoming to tourists</li>
+            </ul>
+          </div>
+
+          <div class="details-section">
+            <h3 class="section-title">Embassy & Consulates</h3>
+            <ul class="details-list">
+              <li><strong>Colombian Embassy, New Delhi:</strong> New Delhi</li>
+              <li><strong>Website:</strong> https://www.cancilleria.gov.co/</li>
+              <li><strong>Visa Services:</strong> +91-11-4155-0300</li>
+              <li>Available at airport on arrival</li>
+            </ul>
+          </div>
+
+          <div class="details-section">
+            <h3 class="section-title">Travel Tips</h3>
+            <ul class="details-list">
+              <li>Tourist card issued at airport</li>
+              <li>Cartagena very charming old city</li>
+              <li>Coffee plantations tour popular</li>
+              <li>Colombian Peso (COP) currency</li>
+              <li>December-March: best weather</li>
+              <li>Very affordable destination</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-panel">
+      <div class="cta-card">
+        <span class="cta-badge">VISA ASSISTANCE</span>
+        <h3 class="cta-title">Let Us Handle Your Visa</h3>
+        <p class="cta-description">Our expert team will assist you with your Colombia visa application, ensuring all documents are prepared correctly.</p>
+
+        <div class="cta-checklist">
+          <li>Document review & verification</li>
+          <li>Application form completion</li>
+          <li>Embassy submission support</li>
+          <li>Fast-track processing available</li>
+        </div>
+
+        <button class="cta-button" onclick="window.location.href='contact.html#plan'">
+          Plan Your Trip
+        </button>
+        <button class="secondary-button" onclick="window.location.href='visas.html'">
+          Back to All Visas
+        </button>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--sand-200);">
+          <p style="font-size: 0.85rem; color: var(--gray-400); margin-bottom: 10px;">Need Help?</p>
+          <a href="https://wa.me/917384848484" style="color: var(--accent-teal); text-decoration: none; font-weight: 600;">
+            💬 Chat with us on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+  /* --------- sticky header scroll behavior --------- */
+  (function () {
+    var header = document.getElementById("siteHeader");
+    
+    function onScroll() {
+      var y = window.scrollY;
+      var threshold = 20;
+      if (header) {
+        header.classList.toggle("is-stuck", y > threshold);
+      }
+    }
+    
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () { 
+        onScroll();
+        ticking = false; 
+      });
+    }, { passive: true });
+    onScroll();
+  })();
+  </script>
+
+</body>
+</html>
