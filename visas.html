@@ -208,7 +208,7 @@
     .visa-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; height: 100%; cursor: pointer; }
     .visa-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
     
-    .visa-card-header { padding: 25px 20px; background: linear-gradient(135deg, var(--accent-teal) 0%, #1a4f5e 100%); color: var(--white); text-align: center; }
+    .visa-card-header { padding: 25px 20px; color: var(--white); text-align: center; }
     .visa-flag { font-size: 3rem; margin-bottom: 10px; }
     .visa-country { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 5px; }
     .visa-type { font-size: 0.85rem; opacity: 0.9; font-weight: 600; }
@@ -373,16 +373,30 @@
     const filterBtns = document.querySelectorAll('.filter-btn');
     let currentFilter = 'all';
 
+    // Color palette for visa cards (vibrant gradients like destination cards)
+    const colorPalette = [
+      'linear-gradient(135deg, #6B4AB8 0%, #3E2A6E 100%)',  // Purple
+      'linear-gradient(135deg, #2C7A99 0%, #1A4F5E 100%)',  // Blue
+      'linear-gradient(135deg, #D4A574 0%, #A68050 100%)',  // Tan/Orange
+      'linear-gradient(135deg, #E74C3C 0%, #C0392B 100%)',  // Red
+      'linear-gradient(135deg, #F39C12 0%, #D68910 100%)',  // Orange
+      'linear-gradient(135deg, #16A085 0%, #0E6251 100%)',  // Green
+      'linear-gradient(135deg, #8E44AD 0%, #663399 100%)',  // Deep Purple
+      'linear-gradient(135deg, #E67E22 0%, #D35400 100%)',  // Dark Orange
+    ];
+
     function renderCards(filter = 'all') {
       container.innerHTML = '';
       const filtered = filter === 'all' ? visaData : visaData.filter(v => v.region === filter);
-      
-      filtered.forEach(visa => {
+
+      filtered.forEach((visa, index) => {
         const card = document.createElement('div');
         card.className = 'visa-card';
         card.onclick = () => window.location.href = visa.link;
+        const colorIndex = index % colorPalette.length;
+        const cardColor = colorPalette[colorIndex];
         card.innerHTML = `
-          <div class="visa-card-header">
+          <div class="visa-card-header" style="background: ${cardColor};">
             <div class="visa-flag">${visa.flag}</div>
             <div class="visa-country">${visa.name}</div>
             <div class="visa-type">${visa.type}</div>
