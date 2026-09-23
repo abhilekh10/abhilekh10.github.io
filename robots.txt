@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /*.json$
 
+# Specific crawl rate guidelines
+User-agent: Googlebot
+Crawl-delay: 0
+Request-rate: 30/1m
+
+User-agent: Bingbot
+Crawl-delay: 1
+Request-rate: 20/1m
+
+# Sitemaps
 Sitemap: https://bookbindass.com/sitemap.xml
