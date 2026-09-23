@@ -17,7 +17,7 @@
     :root { --ink-900: #171041; --ink-600: #6d6797; --sand-200: #e4e0f2; --sand-100: #f3f1fa; --accent-teal: #26186e; --orange-500: #e87b18; --orange-600: #c4640d; --white: #ffffff; --gray-400: #999999; }
     body { min-height: 100vh; color: var(--ink-900); }
     .logo span { color: var(--orange-500); }
-    .visa-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 1fr 400px; gap: 40px; min-height: calc(100vh - 100px); }
+    .visa-container { max-width: 1200px; margin: 0 auto; padding: calc(var(--header-h, 76px) + 40px) 20px 40px; display: grid; grid-template-columns: 1fr 400px; gap: 40px; min-height: calc(100vh - 100px); }
     .visa-ticket { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
     .ticket-header { background: linear-gradient(135deg, #e84c3d 0%, #f39c12 100%); color: var(--white); padding: 30px; position: relative; }
     .ticket-header::after { content: ''; position: absolute; bottom: -15px; left: 0; right: 0; height: 30px; background: repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px); }
