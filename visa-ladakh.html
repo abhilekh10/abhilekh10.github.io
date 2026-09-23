@@ -9,15 +9,13 @@
   <meta property="og:image" content="https://picsum.photos/500/500?random=IN" />
   <meta name="twitter:image" content="https://picsum.photos/500/500?random=IN" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root { --ink-900: #0f1419; --ink-600: #4a5a6a; --sand-200: #e8e6e1; --sand-100: #f5f3f0; --accent-teal: #2d7a8a; --orange-500: #ff8c42; --white: #ffffff; --gray-400: #999999; }
     body { font-family: 'Work Sans', sans-serif; background: #fbfaff; min-height: 100vh; color: var(--ink-900); }
-    header { background: var(--white); padding: 20px 0; border-bottom: 1px solid var(--sand-200); position: sticky; top: 0; z-index: 100; }
-    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.2rem; font-weight: 700; color: var(--ink-900); }
     .logo span { color: var(--orange-500); }
     .visa-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 1fr 400px; gap: 40px; min-height: calc(100vh - 100px); }
     .visa-ticket { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
@@ -54,7 +52,6 @@
     .back-link::before { content: '←'; margin-right: 8px; font-size: 1.2rem; }
   </style>
   <style>
-
     /* ===== HEADER STYLING WITH SCROLL STATES ===== */
     .site-header {
       background: rgba(251, 250, 255, .95);
@@ -66,40 +63,32 @@
       transition: all 0.3s ease;
       backdrop-filter: blur(14px);
     }
-    
     /* Sticky state - when scrolled down */
     .site-header.is-stuck {
       background: rgba(251, 250, 255, .95);
       backdrop-filter: blur(14px);
       box-shadow: 0 1px 0 #e8e6e1, 0 4px 12px rgba(0,0,0,0.08);
     }
-    
     .site-header.is-stuck .brand-tag {
       color: rgba(38, 24, 110, 0.7);
     }
-    
     .site-header.is-stuck .nav a {
       color: #0f1419;
     }
-    
     .site-header.is-stuck .nav a:hover {
       opacity: 0.6;
     }
-    
     .site-header.is-stuck .nav-call {
       border-color: #0f1419;
       color: #0f1419;
     }
-    
     .site-header.is-stuck .nav-call:hover {
       background: rgba(15, 20, 25, 0.1);
     }
-    
     .site-header.is-stuck .nav-cta {
       background: #ff8c42;
       color: white;
     }
-    
 .header-inner {
       max-width: 1400px;
       margin: 0 auto;
@@ -109,7 +98,6 @@
       align-items: center;
       gap: 40px;
     }
-    
     .brand {
       display: flex;
       align-items: center;
@@ -118,7 +106,6 @@
       color: white;
       flex-shrink: 0;
     }
-    
     .brand-mark {
       background: white;
       border-radius: 12px;
@@ -128,12 +115,10 @@
       height: 50px;
       transition: all 0.3s ease;
     }
-    
     .brand-mark img {
       height: 40px;
       width: auto;
     }
-    
     .brand-tag {
       color: rgba(255,255,255,0.8);
       font-size: 0.85rem;
@@ -141,7 +126,6 @@
       letter-spacing: 1px;
       transition: color 0.3s ease;
     }
-    
     .nav {
       display: flex;
       align-items: center;
@@ -150,7 +134,6 @@
       justify-content: flex-end;
       transition: all 0.3s ease;
     }
-    
     .nav ul {
       display: flex;
       gap: 30px;
@@ -159,7 +142,6 @@
       padding: 0;
       align-items: center;
     }
-    
     .nav a {
       color: white;
       text-decoration: none;
@@ -167,11 +149,9 @@
       font-size: 0.95rem;
       transition: opacity 0.3s;
     }
-    
     .nav a:hover {
       opacity: 0.8;
     }
-    
     .nav-call, .nav-cta {
       padding: 10px 20px;
       border-radius: 6px;
@@ -180,27 +160,22 @@
       font-size: 0.9rem;
       transition: all 0.3s;
     }
-    
     .nav-call {
       border: 2px solid white;
       color: white;
       background: transparent;
     }
-    
     .nav-call:hover {
       background: rgba(255,255,255,0.1);
     }
-    
     .nav-cta {
       background: #ff8c42;
       color: white;
     }
-    
     .nav-cta:hover {
       background: #ff7a1f;
       transform: translateY(-2px);
     }
-    
     .nav-toggle {
       display: none;
       background: none;
@@ -209,7 +184,6 @@
       flex-direction: column;
       gap: 5px;
     }
-    
     .nav-toggle span {
       display: block;
       width: 24px;
@@ -218,7 +192,6 @@
       border-radius: 2px;
       transition: all 0.3s;
     }
-    
     @media (max-width: 768px) {
       .nav {
         display: none;
@@ -231,7 +204,6 @@
       }
     }
     /* ===== END HEADER STYLING ===== */
-
   </style>
 </head>
 <body>
@@ -241,7 +213,6 @@
       <span class="brand-mark"><img src="images/logo.png" alt="bookbindass.com" width="826" height="202" /></span>
       <span class="brand-tag">bespoke holidays</span>
     </a>
-
     <nav class="nav" id="nav" aria-label="Primary">
       <ul>
         <li><a href="destinations.html">Destinations</a></li>
@@ -255,13 +226,11 @@
       <a class="btn btn-ghost nav-call" href="https://wa.me/919129888888">+91 91298 88888</a>
       <a class="btn btn-primary nav-cta" href="contact.html#plan">Plan my trip</a>
     </nav>
-
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-
   <div class="visa-container">
     <div class="visa-details">
       <a href="dest-ladakh.html" class="back-link">Back to India</a>
@@ -301,12 +270,10 @@
       </div>
     </div>
   </div>
-
   <script>
   /* --------- sticky header scroll behavior --------- */
   (function () {
     var header = document.getElementById("siteHeader");
-    
     function onScroll() {
       var y = window.scrollY;
       var threshold = 20;
@@ -314,7 +281,6 @@
         header.classList.toggle("is-stuck", y > threshold);
       }
     }
-    
     var ticking = false;
     window.addEventListener("scroll", function () {
       if (ticking) return;
@@ -327,6 +293,5 @@
     onScroll();
   })();
   </script>
-
 </body>
 </html>
