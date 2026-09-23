@@ -233,6 +233,14 @@
     }
 
     btn.addEventListener("click", function () {
+      var now = Date.now();
+
+      // Rate limiting: prevent rapid clicks
+      if (now - btn.__lastClick < 500) {
+        return;
+      }
+      btn.__lastClick = now;
+
       var value = btn.dataset.copy || "";
 
       if (navigator.clipboard && window.isSecureContext) {
@@ -242,7 +250,60 @@
 
       fallback();
     });
+
+    btn.__lastClick = 0;
   });
+
+  /* ---------- security: prevent right-click on sensitive data ---------- */
+  var sensitiveZones = $$("[data-sensitive], [data-secure-zone]");
+  sensitiveZones.forEach(function (zone) {
+    zone.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      return false;
+    });
+  });
+
+  /* ---------- security: prevent keyboard shortcuts on sensitive data ---------- */
+  var secureZone = $("[data-secure-zone]");
+  if (secureZone) {
+    document.addEventListener("keydown", function (e) {
+      var target = e.target;
+      // Check if the key event originated from within sensitive area
+      if (!secureZone.contains(target)) return;
+
+      // Block Ctrl+A / Cmd+A (select all)
+      if ((e.ctrlKey || e.metaKey) && e.key === "a") {
+        e.preventDefault();
+        return false;
+      }
+
+      // Block Ctrl+C / Cmd+C (copy) except on .copy buttons
+      if ((e.ctrlKey || e.metaKey) && e.key === "c" && !target.closest(".copy")) {
+        e.preventDefault();
+        return false;
+      }
+
+      // Block Ctrl+X / Cmd+X (cut)
+      if ((e.ctrlKey || e.metaKey) && e.key === "x") {
+        e.preventDefault();
+        return false;
+      }
+    });
+  }
+
+  /* ---------- security: prevent image drag on QR code ---------- */
+  var qrCode = $("[data-secure='qr-code']");
+  if (qrCode) {
+    qrCode.addEventListener("dragstart", function (e) {
+      e.preventDefault();
+      return false;
+    });
+
+    qrCode.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      return false;
+    });
+  }
 
   /* ---------- enquiry form now handled by MS Forms ---------- */
 })();

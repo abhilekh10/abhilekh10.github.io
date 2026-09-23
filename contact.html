@@ -144,8 +144,8 @@
           <span class="bank-chevron" aria-hidden="true"></span>
         </summary>
 
-        <div class="bank-panel">
-      <div class="bank-grid">
+        <div class="bank-panel" data-sensitive="banking-details" role="complementary" aria-label="Sensitive banking information">
+      <div class="bank-grid" data-secure-zone="true">
         <div class="bank-card">
           <h3>Bank transfer <span>NEFT · IMPS · RTGS</span></h3>
 
@@ -196,8 +196,9 @@
 
         <aside class="bank-qr">
           <h3>Pay by UPI</h3>
-          <img src="images/qr-upi.png" width="701" height="988"
-               alt="UPI QR code for Bookbindass — UPI ID 9129888888@okbizaxis" />
+          <img src="images/qr-upi.png" width="701" height="988" data-secure="qr-code"
+               alt="UPI QR code for Bookbindass — UPI ID 9129888888@okbizaxis"
+               draggable="false" oncontextmenu="return false" />
           <div class="upi-id">
             <span class="bank-value bank-mono">9129888888@okbizaxis</span>
             <button type="button" class="copy" data-copy="9129888888@okbizaxis"
@@ -207,12 +208,19 @@
         </aside>
       </div>
 
+      <div class="bank-security-notice">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-7h2v2h-2v-2zm0-8h2v6h-2V7z"/>
+        </svg>
+        <p>
+          <strong>Authentic payment details:</strong> We only ask for money against a written itinerary and invoice from <a href="mailto:contact@bookbindass.com">contact@bookbindass.com</a>.
+          <strong>If any payment details differ from this page, call us immediately on <a href="https://wa.me/919129888888">+91 91298 88888</a> before transferring.</strong>
+          Verify all details through official channels. Please share the payment reference with us once complete.
+        </p>
+      </div>
+
       <p class="bank-note">
-        <strong>Before you pay:</strong> we only ever ask for money against a written itinerary and an invoice
-        from <a href="mailto:contact@bookbindass.com">contact@bookbindass.com</a>. These are the only accounts
-        we collect payments into — if anything you've been sent differs from this page, call us on
-        <a href="tel:+919129888888">+91 91298 88888</a> before transferring. Please share the payment
-        reference with us once it's done.
+        <strong>Security reminder:</strong> Never share your payment proof with unauthorized persons. We will never ask for passwords, OTPs, or card details via email, phone, or messaging apps.
       </p>
         </div>
       </details>
