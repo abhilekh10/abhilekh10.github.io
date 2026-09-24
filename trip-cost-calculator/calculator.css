@@ -7,6 +7,16 @@
 
 .calc-hero { padding-bottom: 56px; }
 
+.calc-ai-link { margin-top: 18px; max-width: none; }
+.calc-ai-link a {
+  color: var(--orange-400);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(245, 154, 61, .4);
+  transition: border-color .2s var(--ease);
+}
+.calc-ai-link a:hover { border-color: var(--orange-400); }
+
 .calc-wrap { max-width: 760px; }
 
 /* Several site-wide classes used in here (.btn, .field, .calc-shell) set

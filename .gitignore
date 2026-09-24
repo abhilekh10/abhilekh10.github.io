@@ -9,3 +9,8 @@
 
 # logs
 *.log
+
+# Cloudflare Worker local state / secrets — never commit these
+cloudflare-worker/.wrangler/
+cloudflare-worker/.dev.vars
+.wrangler/

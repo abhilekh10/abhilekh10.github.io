@@ -568,7 +568,26 @@
     }
   });
 
+  /* ---------- prefill from AI Trip Ideas handoff (?from=&destination=&adults=&children=&days=) ---------- */
+  function prefillFromQueryString() {
+    if (!window.location.search) return;
+    var params = new URLSearchParams(window.location.search);
+
+    var from = params.get("from");
+    var destination = params.get("destination");
+    var adults = params.get("adults");
+    var children = params.get("children");
+    var days = params.get("days");
+
+    if (from) $("#fieldFrom").value = from;
+    if (destination) $("#fieldDestination").value = destination;
+    if (adults) $("#fieldAdults").value = num(adults, { fallback: 2, min: 1, max: 20 });
+    if (children) $("#fieldChildren").value = num(children, { fallback: 0, min: 0, max: 20 });
+    if (days) $("#fieldDays").value = num(days, { fallback: 5, min: 1, max: 60 });
+  }
+
   /* ---------- init ---------- */
+  prefillFromQueryString();
   syncNightsFromDays();
   renderStep();
 })();
