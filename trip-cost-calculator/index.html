@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GLWXZ9MCN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9GLWXZ9MCN');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trip Cost Calculator – Estimate Your Travel Budget | BookBindass</title>
+<meta name="description" content="Free trip cost calculator for Indian travelers. Estimate flights, hotels, food, local transport and activities in seconds, then get a recommended budget with a 10% buffer." />
+<meta name="keywords" content="trip cost calculator, travel budget calculator, holiday budget estimator, travel cost estimator India" />
+<meta name="theme-color" content="#26186e" />
+<link rel="canonical" href="https://bookbindass.com/trip-cost-calculator/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bookbindass.com/trip-cost-calculator/" />
+<meta property="og:site_name" content="Bookbindass" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:title" content="Trip Cost Calculator — Estimate Your Travel Budget | Bookbindass" />
+<meta property="og:description" content="Estimate flights, hotels, food, local transport and activities in seconds, then get a recommended budget with a 10% buffer." />
+<meta property="og:image" content="https://bookbindass.com/images/hero.jpg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1080" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Trip Cost Calculator — Bookbindass" />
+<meta name="twitter:description" content="Estimate your total trip budget — flights, hotels, food, transport and activities — in seconds." />
+<meta name="twitter:image" content="https://bookbindass.com/images/hero.jpg" />
+
+<link rel="icon" type="image/png" href="../images/favicon.png" />
+<link rel="apple-touch-icon" href="../images/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="calculator.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bookbindass.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Trip Cost Calculator", "item": "https://bookbindass.com/trip-cost-calculator/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my travel budget?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add up every category you'll actually spend on: round-trip travel, accommodation, food, local transport, activities/sightseeing, and shopping or miscellaneous spends. Multiply per-person costs by the number of travelers, and per-night or per-day costs by nights or days. This calculator does that arithmetic for you and also suggests a 10% contingency on top."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much money should I keep aside for a trip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A reliable starting point is your estimated total across travel, stay, food, local transport, activities and shopping — plus a 10% emergency buffer for price surges, extra meals out, or a last-minute activity you didn't plan for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much emergency budget should I add?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10% of your total estimated trip cost is a sensible cushion for most leisure trips. For remote destinations, multi-country itineraries, or trips during peak season, consider 15–20% instead, since prices and availability are less predictable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I reduce my travel expenses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hotel and travel are usually the two largest line items, so small changes there have the biggest impact — booking a slightly cheaper room per night, traveling on off-peak dates, or choosing trains/buses over flights for shorter routes. Food and local transport add up daily, so even a small per-day reduction compounds over a multi-day trip."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header is-stuck" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="bookbindass.com — home">
+      <span class="brand-mark"><img src="../images/logo.png" alt="bookbindass.com" width="826" height="202" /></span>
+      <span class="brand-tag">bespoke holidays</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <ul>
+        <li><a href="../destinations.html">Destinations</a></li>
+        <li><a href="../visas.html">Visas</a></li>
+        <li><a href="../index.html#how">How it works</a></li>
+        <li><a href="../events.html">Events</a></li>
+        <li><a href="../index.html#stories">Stories</a></li>
+        <li><a href="../contact.html#bank">Pay</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+      <a class="btn btn-ghost nav-call" href="https://wa.me/919129888888">+91 91298 88888</a>
+      <a class="btn btn-primary nav-cta" href="../contact.html#plan">Plan my trip</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero calc-hero">
+    <div class="wrap">
+      <p class="eyebrow reveal">Trip Budget</p>
+      <h1 class="reveal">How Much Will Your Trip Cost?</h1>
+      <p class="reveal">Plan your travel budget in seconds. Estimate flights, hotels, food, transport, activities
+        and more.</p>
+    </div>
+  </section>
+
+  <section class="section calc-section" id="calculator">
+    <div class="wrap calc-wrap">
+
+      <!-- ============ PROGRESS ============ -->
+      <div class="calc-progress" aria-hidden="false">
+        <p class="calc-progress-label"><span id="calcStepNow">1</span> of <span id="calcStepTotal">7</span> —
+          <span id="calcStepName">Trip details</span></p>
+        <div class="calc-progress-track">
+          <div class="calc-progress-fill" id="calcProgressFill" style="width: 14.2857%"></div>
+        </div>
+      </div>
+
+      <!-- ============ FORM ============ -->
+      <form class="calc-shell" id="calcForm" novalidate>
+
+        <!-- STEP 1 — TRIP DETAILS -->
+        <fieldset class="calc-step is-active" data-step="1">
+          <legend class="calc-step-title">Trip details</legend>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="fieldFrom">Travelling from</label>
+              <input type="text" id="fieldFrom" name="from" placeholder="e.g. Chandigarh" autocomplete="off" />
+              <p class="error" id="errFrom"></p>
+            </div>
+            <div class="field">
+              <label for="fieldDestination">Destination</label>
+              <input type="text" id="fieldDestination" name="destination" placeholder="e.g. Goa" autocomplete="off" />
+              <p class="error" id="errDestination"></p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label id="lblAdults">Adults</label>
+              <div class="stepper" data-stepper="adults" role="group" aria-labelledby="lblAdults">
+                <button type="button" class="stepper-btn" data-action="dec" aria-label="Decrease adults">−</button>
+                <input type="number" id="fieldAdults" name="adults" min="1" max="20" value="2" inputmode="numeric" />
+                <button type="button" class="stepper-btn" data-action="inc" aria-label="Increase adults">+</button>
+              </div>
+            </div>
+            <div class="field">
+              <label id="lblChildren">Children</label>
+              <div class="stepper" data-stepper="children" role="group" aria-labelledby="lblChildren">
+                <button type="button" class="stepper-btn" data-action="dec" aria-label="Decrease children">−</button>
+                <input type="number" id="fieldChildren" name="children" min="0" max="20" value="0" inputmode="numeric" />
+                <button type="button" class="stepper-btn" data-action="inc" aria-label="Increase children">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label id="lblDays">Number of days</label>
+              <div class="stepper" data-stepper="days" role="group" aria-labelledby="lblDays">
+                <button type="button" class="stepper-btn" data-action="dec" aria-label="Decrease days">−</button>
+                <input type="number" id="fieldDays" name="days" min="1" max="60" value="5" inputmode="numeric" />
+                <button type="button" class="stepper-btn" data-action="inc" aria-label="Increase days">+</button>
+              </div>
+              <p class="error" id="errDays"></p>
+            </div>
+            <div class="field">
+              <label id="lblNights">Number of nights <span class="optional">(auto, editable)</span></label>
+              <div class="stepper" data-stepper="nights" role="group" aria-labelledby="lblNights">
+                <button type="button" class="stepper-btn" data-action="dec" aria-label="Decrease nights">−</button>
+                <input type="number" id="fieldNights" name="nights" min="0" max="59" value="4" inputmode="numeric" />
+                <button type="button" class="stepper-btn" data-action="inc" aria-label="Increase nights">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Travel style</label>
+            <div class="option-cards option-cards-4" id="travelStyleCards">
+              <label class="option-card">
+                <input type="radio" name="travelStyle" value="budget" />
+                <span class="option-card-ico" aria-hidden="true">🎒</span>
+                <span class="option-card-title">Budget</span>
+                <span class="option-card-sub">Hostels &amp; street food</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travelStyle" value="comfort" checked />
+                <span class="option-card-ico" aria-hidden="true">🛋️</span>
+                <span class="option-card-title">Comfort</span>
+                <span class="option-card-sub">3-star &amp; mixed dining</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travelStyle" value="premium" />
+                <span class="option-card-ico" aria-hidden="true">✨</span>
+                <span class="option-card-title">Premium</span>
+                <span class="option-card-sub">4-star &amp; curated stays</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travelStyle" value="luxury" />
+                <span class="option-card-ico" aria-hidden="true">👑</span>
+                <span class="option-card-title">Luxury</span>
+                <span class="option-card-sub">5-star &amp; private stays</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- STEP 2 — TRAVEL COST -->
+        <fieldset class="calc-step" data-step="2">
+          <legend class="calc-step-title">How are you travelling?</legend>
+
+          <div class="field">
+            <div class="option-cards option-cards-5" id="travelModeCards">
+              <label class="option-card">
+                <input type="radio" name="travelMode" value="flight" checked />
+                <span class="option-card-ico" aria-hidden="true">✈️</span>
+                <span class="option-card-title">Flight</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travelMode" value="train" />
+                <span class="option-card-ico" aria-hidden="true">🚆</span>
+                <span class="option-card-title">Train</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travelMode" value="bus" />
+                <span class="option-card-ico" aria-hidden="true">🚌</span>
+                <span class="option-card-title">Bus</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travelMode" value="car" />
+                <span class="option-card-ico" aria-hidden="true">🚗</span>
+                <span class="option-card-title">Car</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travelMode" value="other" />
+                <span class="option-card-ico" aria-hidden="true">🧳</span>
+                <span class="option-card-title">Other</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="fieldTravelCost">Estimated round-trip cost <span class="optional">(per person, ₹)</span></label>
+            <input type="number" id="fieldTravelCost" name="travelCost" min="0" placeholder="e.g. 8000" value="8000" inputmode="numeric" />
+            <p class="error" id="errTravelCost"></p>
+          </div>
+
+          <p class="calc-live" id="liveTravelCost"></p>
+        </fieldset>
+
+        <!-- STEP 3 — HOTEL -->
+        <fieldset class="calc-step" data-step="3">
+          <legend class="calc-step-title">Where will you stay?</legend>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="fieldHotelCost">Hotel cost <span class="optional">(per night, ₹)</span></label>
+              <input type="number" id="fieldHotelCost" name="hotelCost" min="0" placeholder="e.g. 3500" value="3500" inputmode="numeric" />
+              <p class="error" id="errHotelCost"></p>
+            </div>
+            <div class="field">
+              <label id="lblRooms">Number of rooms</label>
+              <div class="stepper" data-stepper="rooms" role="group" aria-labelledby="lblRooms">
+                <button type="button" class="stepper-btn" data-action="dec" aria-label="Decrease rooms">−</button>
+                <input type="number" id="fieldRooms" name="rooms" min="1" max="20" value="1" inputmode="numeric" />
+                <button type="button" class="stepper-btn" data-action="inc" aria-label="Increase rooms">+</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="calc-live" id="liveHotelCost"></p>
+        </fieldset>
+
+        <!-- STEP 4 — FOOD -->
+        <fieldset class="calc-step" data-step="4">
+          <legend class="calc-step-title">Food &amp; dining</legend>
+          <p class="calc-step-hint">Estimated food cost, per person per day</p>
+
+          <div class="quick-pills" id="foodPills">
+            <button type="button" class="quick-pill" data-value="600">Budget<span>₹600</span></button>
+            <button type="button" class="quick-pill is-active" data-value="1200">Standard<span>₹1,200</span></button>
+            <button type="button" class="quick-pill" data-value="2000">Comfort<span>₹2,000</span></button>
+            <button type="button" class="quick-pill" data-value="3500">Premium<span>₹3,500</span></button>
+            <button type="button" class="quick-pill" data-value="custom">Custom</button>
+          </div>
+
+          <div class="field calc-custom-field" id="foodCustomField" hidden>
+            <label for="fieldFoodCustom">Custom food cost <span class="optional">(per person per day, ₹)</span></label>
+            <input type="number" id="fieldFoodCustom" name="foodCustom" min="0" inputmode="numeric" />
+          </div>
+
+          <input type="hidden" id="fieldFood" value="1200" />
+          <p class="calc-live" id="liveFoodCost"></p>
+        </fieldset>
+
+        <!-- STEP 5 — LOCAL TRANSPORT -->
+        <fieldset class="calc-step" data-step="5">
+          <legend class="calc-step-title">Local transport</legend>
+          <p class="calc-step-hint">Estimated local transport cost, per day (cabs, autos, fuel, tickets)</p>
+
+          <div class="quick-pills" id="transportPills">
+            <button type="button" class="quick-pill" data-value="500">₹500</button>
+            <button type="button" class="quick-pill is-active" data-value="1000">₹1,000</button>
+            <button type="button" class="quick-pill" data-value="1500">₹1,500</button>
+            <button type="button" class="quick-pill" data-value="2500">₹2,500</button>
+            <button type="button" class="quick-pill" data-value="custom">Custom</button>
+          </div>
+
+          <div class="field calc-custom-field" id="transportCustomField" hidden>
+            <label for="fieldTransportCustom">Custom local transport <span class="optional">(per day, ₹)</span></label>
+            <input type="number" id="fieldTransportCustom" name="transportCustom" min="0" inputmode="numeric" />
+          </div>
+
+          <input type="hidden" id="fieldTransport" value="1000" />
+          <p class="calc-live" id="liveTransportCost"></p>
+        </fieldset>
+
+        <!-- STEP 6 — ACTIVITIES -->
+        <fieldset class="calc-step" data-step="6">
+          <legend class="calc-step-title">Activities &amp; sightseeing</legend>
+
+          <div class="field">
+            <label for="fieldActivities">Estimated activities cost <span class="optional">(per person, ₹)</span></label>
+            <input type="number" id="fieldActivities" name="activities" min="0" placeholder="e.g. 4000" value="0" inputmode="numeric" />
+          </div>
+
+          <p class="calc-live" id="liveActivitiesCost"></p>
+        </fieldset>
+
+        <!-- STEP 7 — SHOPPING & MISC -->
+        <fieldset class="calc-step" data-step="7">
+          <legend class="calc-step-title">Shopping &amp; miscellaneous</legend>
+
+          <div class="field">
+            <label for="fieldShopping">Shopping / miscellaneous budget <span class="optional">(optional, ₹)</span></label>
+            <input type="number" id="fieldShopping" name="shopping" min="0" placeholder="e.g. 5000" value="0" inputmode="numeric" />
+          </div>
+
+          <p class="form-note">This is added directly to your total — no multiplier applied.</p>
+        </fieldset>
+
+        <!-- STEP NAV -->
+        <div class="calc-nav">
+          <button type="button" class="btn btn-ghost calc-btn-back" id="calcBack" hidden>Back</button>
+          <button type="button" class="btn btn-primary btn-lg calc-btn-next" id="calcNext">Next</button>
+          <button type="button" class="btn btn-primary btn-lg calc-btn-calculate" id="calcCalculate" hidden>Calculate My Trip Budget</button>
+        </div>
+      </form>
+
+      <!-- ============ RESULT ============ -->
+      <section class="calc-result" id="calcResult" hidden aria-live="polite">
+
+        <header class="calc-result-head">
+          <p class="eyebrow">Your Estimated Trip Budget</p>
+          <h2 class="calc-route" id="resRoute">Chandigarh → Goa</h2>
+          <p class="calc-meta" id="resMeta">5 Days • 4 Nights • 2 Travelers</p>
+        </header>
+
+        <div class="calc-total-card">
+          <div>
+            <p class="calc-total-label">Estimated total</p>
+            <p class="calc-total-amount" id="resTotal">₹0</p>
+          </div>
+          <div>
+            <p class="calc-total-label">Per person</p>
+            <p class="calc-total-amount calc-total-amount-sm" id="resPerPerson">₹0</p>
+          </div>
+        </div>
+
+        <div class="calc-breakdown">
+          <h3>Cost breakdown</h3>
+          <dl class="breakdown-list" id="breakdownList">
+            <!-- rows injected by JS -->
+          </dl>
+          <div class="breakdown-total">
+            <span>Total</span>
+            <span id="breakdownTotal">₹0</span>
+          </div>
+        </div>
+
+        <div class="calc-progress-bars">
+          <h3>Where your money goes</h3>
+          <div id="progressBars"><!-- bars injected by JS --></div>
+        </div>
+
+        <div class="calc-insights">
+          <h3>Smart budget insights</h3>
+          <ul id="insightsList"><!-- injected by JS --></ul>
+        </div>
+
+        <div class="calc-recommended">
+          <p class="calc-recommended-label">Recommended budget <span>(trip estimate + 10% buffer)</span></p>
+          <p class="calc-recommended-amount" id="resRecommended">₹0</p>
+        </div>
+
+        <div class="calc-booking-cta">
+          <h3>Ready to plan your trip?</h3>
+          <div class="calc-booking-buttons">
+            <a class="btn btn-primary btn-lg" id="bookFlights" href="#" target="_blank" rel="noopener">Find Flights</a>
+            <a class="btn btn-ghost btn-lg" id="bookHotels" href="#" target="_blank" rel="noopener">Find Hotels</a>
+            <a class="btn btn-ghost btn-lg" id="bookActivities" href="#" target="_blank" rel="noopener">Explore Activities</a>
+          </div>
+        </div>
+
+        <div class="calc-result-actions">
+          <button type="button" class="btn btn-ghost" id="btnAdjust">Adjust my budget</button>
+          <button type="button" class="btn btn-ghost" id="btnStartNew">Start new trip</button>
+          <button type="button" class="btn btn-dark" id="btnCopy">Copy trip budget</button>
+          <a class="btn btn-whatsapp" id="btnWhatsAppShare" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.87 9.87 0 0 0 4.74 1.2c5.46 0 9.9-4.43 9.9-9.9S17.5 2 12.04 2Zm0 18.05c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.15.82.84-3.06-.2-.32a8.14 8.14 0 0 1-1.25-4.35 8.16 8.16 0 1 1 8.31 8.25Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.09-.39-.13-.55.12s-.64.8-.78.97c-.14.16-.29.18-.53.06a6.65 6.65 0 0 1-3.32-2.9c-.25-.44.25-.4.71-1.35.08-.16.04-.3-.02-.42-.06-.13-.55-1.33-.76-1.82-.2-.47-.4-.4-.55-.41h-.47c-.16 0-.42.06-.64.3-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64 1.53.66 2.13.72 2.9.6.46-.06 1.46-.6 1.66-1.17.21-.58.21-1.07.15-1.17-.06-.11-.22-.17-.47-.29Z"/></svg>
+            Share on WhatsApp
+          </a>
+        </div>
+        <p class="calc-copy-feedback" id="copyFeedback" aria-live="polite"></p>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- ============ SEO CONTENT ============ -->
+  <section class="section section-tint">
+    <div class="wrap prose">
+      <h2>How to calculate your trip cost</h2>
+      <p>A realistic travel budget is just the sum of a handful of categories, each estimated honestly rather
+        than guessed. Here's what to account for before you book anything.</p>
+
+      <h3>Transportation</h3>
+      <p>Your round-trip cost to and from the destination — flight, train, bus or fuel — multiplied by the
+        number of travelers. This is usually the most price-sensitive line item, since fares change with dates
+        and how far ahead you book.</p>
+
+      <h3>Accommodation</h3>
+      <p>Hotel or stay cost per night, multiplied by the number of rooms you need and the number of nights.
+        Splitting travelers across fewer rooms is the single biggest lever for reducing this category.</p>
+
+      <h3>Food</h3>
+      <p>A daily per-person estimate covering meals, snacks and drinks, multiplied by travelers and the number
+        of days. Street food and local markets sit at the budget end; hotel dining and specialty restaurants
+        push this toward the premium end.</p>
+
+      <h3>Local transport</h3>
+      <p>Cabs, autos, rental scooters, fuel or public transport within the destination, estimated per day. This
+        varies a lot by destination — a walkable town costs far less here than a spread-out city.</p>
+
+      <h3>Activities</h3>
+      <p>Sightseeing entry fees, tours, water sports, or any paid experience, usually estimated per person for
+        the whole trip rather than per day.</p>
+
+      <h3>Shopping &amp; miscellaneous</h3>
+      <p>Souvenirs, gifts, and the small unplanned purchases that don't fit neatly into another category. It's
+        easy to forget this one until you're already spending it.</p>
+
+      <h3>Emergency fund</h3>
+      <p>A 10% buffer on top of your total covers the things no estimate catches — a surge-priced cab, an extra
+        meal out, a fare change. For remote or peak-season trips, consider 15–20% instead.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Questions</p>
+        <h2 class="section-title">Frequently asked questions</h2>
+      </header>
+
+      <div class="calc-faq-list">
+        <details class="faq-item reveal">
+          <summary>How do I calculate my travel budget?</summary>
+          <p>Add up every category you'll actually spend on: round-trip travel, accommodation, food, local
+            transport, activities/sightseeing, and shopping or miscellaneous spends. Multiply per-person costs
+            by the number of travelers, and per-night or per-day costs by nights or days. This calculator does
+            that arithmetic for you and also suggests a 10% contingency on top.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>How much money should I keep aside for a trip?</summary>
+          <p>A reliable starting point is your estimated total across travel, stay, food, local transport,
+            activities and shopping — plus a 10% emergency buffer for price surges, extra meals out, or a
+            last-minute activity you didn't plan for.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>How much emergency budget should I add?</summary>
+          <p>10% of your total estimated trip cost is a sensible cushion for most leisure trips. For remote
+            destinations, multi-country itineraries, or trips during peak season, consider 15–20% instead,
+            since prices and availability are less predictable.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>How can I reduce my travel expenses?</summary>
+          <p>Hotel and travel are usually the two largest line items, so small changes there have the biggest
+            impact — booking a slightly cheaper room per night, traveling on off-peak dates, or choosing
+            trains/buses over flights for shorter routes. Food and local transport add up daily, so even a
+            small per-day reduction compounds over a multi-day trip.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Want us to plan it for you?</h2>
+      <p>Send us these numbers and your dates. We'll come back within 24 hours with a real itinerary and an
+        itemised price — no fee, no obligation.</p>
+      <a class="btn btn-dark btn-lg" href="../contact.html#plan">Plan my trip</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark"><img src="../images/logo.png" alt="bookbindass.com" width="826" height="202" /></span>
+        <span class="brand-tag">bespoke holidays</span>
+      </a>
+      <p>Bespoke holidays and private events, planned with complete discretion — for travellers who expect more than a package tour.</p>
+    </div>
+
+    <nav class="footer-col" aria-label="Destinations">
+      <h3>Destinations</h3>
+      <ul>
+        <li><a href="../destinations.html#dest-maldives">Maldives</a></li>
+        <li><a href="../destinations.html#dest-santorini">Santorini</a></li>
+        <li><a href="../destinations.html#dest-kerala">Kerala</a></li>
+        <li><a href="../destinations.html#dest-kashmir">Kashmir</a></li>
+        <li><a href="../visas.html">Visa services</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="Company">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="../about.html">About us</a></li>
+        <li><a href="../index.html#why">Why book with us</a></li>
+        <li><a href="../index.html#how">How it works</a></li>
+        <li><a href="../events.html">Events &amp; artists</a></li>
+        <li><a href="../index.html#stories">Traveller stories</a></li>
+        <li><a href="../contact.html#bank">Bank details</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="https://wa.me/919129888888">+91 91298 88888</a></li>
+        <li><a href="https://wa.me/917384848484">+91 73848 48484</a></li>
+        <li><a href="mailto:contact@bookbindass.com">contact@bookbindass.com</a></li>
+        <li><a href="https://wa.me/919129888888">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/book.bindass" target="_blank" rel="noopener">Instagram</a></li>
+        <li class="footer-address"><a href="https://maps.google.com/?q=B+Block+Aerocity+Mohali" target="_blank" rel="noopener">B Block Aerocity, Mohali, Punjab 160071</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-base">
+    <p>&copy; <span id="year">2026</span> bookbindass.com — All rights reserved.</p>
+    <p>This calculator gives an estimate only and is not a quote or invoice.</p>
+  </div>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/917384848484" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.87 9.87 0 0 0 4.74 1.2c5.46 0 9.9-4.43 9.9-9.9S17.5 2 12.04 2Zm0 18.05c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.15.82.84-3.06-.2-.32a8.14 8.14 0 0 1-1.25-4.35 8.16 8.16 0 1 1 8.31 8.25Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.09-.39-.13-.55.12s-.64.8-.78.97c-.14.16-.29.18-.53.06a6.65 6.65 0 0 1-3.32-2.9c-.25-.44.25-.4.71-1.35.08-.16.04-.3-.02-.42-.06-.13-.55-1.33-.76-1.82-.2-.47-.4-.4-.55-.41h-.47c-.16 0-.42.06-.64.3-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64 1.53.66 2.13.72 2.9.6.46-.06 1.46-.6 1.66-1.17.21-.58.21-1.07.15-1.17-.06-.11-.22-.17-.47-.29Z"/></svg>
+  <span>Let's chat</span>
+</a>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="../js/script.js" defer></script>
+<script src="calculator.js" defer></script>
+</body>
+</html>
