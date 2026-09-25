@@ -1,9 +1,9 @@
 /* =========================================================
    Bookbindass — AI Trip Ideas Worker
    Deploy this yourself with Wrangler (see README.md in this
-   folder). It is the only place the Gemini API key is ever
-   used — the key lives in Cloudflare's encrypted secret store,
-   never in this repo and never in the browser.
+   folder). Runs on Cloudflare Workers AI — inference happens on
+   Cloudflare's own infrastructure via the `env.AI` binding, so
+   there is no external API key to manage, rotate, or leak.
    ========================================================= */
 
 const MAX_QUERY_LENGTH = 300;
@@ -56,8 +56,8 @@ export default {
       return jsonResponse({ error: "Method not allowed" }, 405, headers);
     }
 
-    if (!env.GEMINI_API_KEY) {
-      return jsonResponse({ error: "Server is not configured (missing API key)." }, 500, headers);
+    if (!env.AI) {
+      return jsonResponse({ error: "Server is not configured (missing AI binding)." }, 500, headers);
     }
 
     let body;
@@ -75,84 +75,57 @@ export default {
       return jsonResponse({ error: "That's a bit long — please keep it under " + MAX_QUERY_LENGTH + " characters." }, 400, headers);
     }
 
-    const model = env.GEMINI_MODEL || "gemini-2.5-flash";
-    const geminiUrl = "https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent";
-    const geminiBody = JSON.stringify({
-      systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
-      contents: [{ role: "user", parts: [{ text: query }] }],
-      generationConfig: {
-        responseMimeType: "application/json",
-        temperature: 0.7,
-        maxOutputTokens: 700
-      }
-    });
+    const model = env.WORKERS_AI_MODEL || "@cf/zai-org/glm-4.7-flash";
 
-    // Free-tier Gemini keys share a lower-priority capacity pool and
-    // return 503 "high demand" far more often than paid keys, even on
-    // stable models — a couple of quick retries smooths over most of it.
-    const MAX_ATTEMPTS = 3;
-    let upstream;
-    let lastErrText = "";
+    const MAX_ATTEMPTS = 2;
+    let aiResp;
+    let lastErr;
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
       try {
-        upstream = await fetch(geminiUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "x-goog-api-key": env.GEMINI_API_KEY
-          },
-          body: geminiBody
+        aiResp = await env.AI.run(model, {
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT },
+            { role: "user", content: query }
+          ],
+          response_format: { type: "json_object" },
+          temperature: 0.7,
+          max_completion_tokens: 2000
         });
+        lastErr = null;
+        break;
       } catch (e) {
-        if (attempt === MAX_ATTEMPTS) {
-          return jsonResponse({ error: "Could not reach the AI service. Please try again." }, 502, headers);
-        }
-        continue;
+        lastErr = e;
+        console.error("Workers AI error (attempt " + attempt + ")", e && e.message ? e.message : String(e));
       }
-
-      if (upstream.ok) break;
-
-      lastErrText = await upstream.text();
-      console.error("Gemini upstream error (attempt " + attempt + ")", upstream.status, lastErrText);
-
-      const retryable = upstream.status === 503 || upstream.status === 429;
-      if (!retryable || attempt === MAX_ATTEMPTS) {
-        const status = upstream.status === 429 ? 429 : 502;
-        return jsonResponse({ error: "The AI service is temporarily unavailable. Please try again shortly." }, status, headers);
-      }
-
-      await new Promise(function (resolve) { setTimeout(resolve, 500 * attempt); });
     }
 
-    let payload;
-    try {
-      payload = await upstream.json();
-    } catch (e) {
-      return jsonResponse({ error: "Unexpected response from the AI service." }, 502, headers);
+    if (lastErr) {
+      return jsonResponse({ error: "The AI service is temporarily unavailable. Please try again shortly." }, 502, headers);
     }
 
-    const parts = payload && payload.candidates && payload.candidates[0]
-      && payload.candidates[0].content && payload.candidates[0].content.parts;
-
-    // Some models emit a "thought" part before the real answer part —
-    // skip those and concatenate only the actual text parts.
-    const raw = Array.isArray(parts)
-      ? parts.filter(function (p) { return p && p.text && !p.thought; }).map(function (p) { return p.text; }).join("")
-      : null;
+    // This model returns an OpenAI-compatible chat completion shape;
+    // guard for a couple of other shapes some Workers AI models use.
+    const raw = typeof aiResp === "string"
+      ? aiResp
+      : (aiResp && aiResp.choices && aiResp.choices[0] && aiResp.choices[0].message && aiResp.choices[0].message.content)
+        || (aiResp && aiResp.response)
+        || (aiResp && aiResp.result && aiResp.result.response)
+        || null;
 
     if (!raw) {
+      console.error("Workers AI unexpected shape", JSON.stringify(aiResp).slice(0, 800));
       return jsonResponse({ error: "The AI service returned an empty response." }, 502, headers);
     }
 
     // Strip a ```json ... ``` fence in case the model wraps the JSON
-    // despite responseMimeType being set to application/json.
+    // despite response_format being set to json_object.
     const cleaned = raw.trim().replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/, "");
 
     let parsed;
     try {
       parsed = JSON.parse(cleaned);
     } catch (e) {
-      console.error("Gemini unparsable response", raw.slice(0, 500));
+      console.error("Workers AI unparsable response", raw.slice(0, 500));
       return jsonResponse({ error: "Could not understand the AI response. Please try again." }, 502, headers);
     }
 
