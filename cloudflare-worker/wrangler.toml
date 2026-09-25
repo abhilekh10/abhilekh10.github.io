@@ -4,8 +4,8 @@ compatibility_date = "2024-11-01"
 
 [vars]
 ALLOWED_ORIGIN = "https://bookbindass.com"
-OPENAI_MODEL = "gpt-4o-mini"
+GEMINI_MODEL = "gemini-3.8-flash"
 
-# The OpenAI key is NOT set here — it must never be committed to git.
+# The Gemini key is NOT set here — it must never be committed to git.
 # Set it as an encrypted secret instead:
-#   wrangler secret put OPENAI_API_KEY
+#   wrangler secret put GEMINI_API_KEY
