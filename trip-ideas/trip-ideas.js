@@ -16,7 +16,7 @@
      silently.
      --------------------------------------------------------- */
   var CONFIG = {
-    ENDPOINT: "" // e.g. "https://bookbindass-trip-ideas.YOUR-SUBDOMAIN.workers.dev"
+    ENDPOINT: "https://bookbindass-trip-ideas.bookbindasscom.workers.dev"
   };
 
   var form = $("#ideasForm");

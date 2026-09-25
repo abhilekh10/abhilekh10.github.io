@@ -102,6 +102,8 @@ export default {
     }
 
     if (!upstream.ok) {
+      const errText = await upstream.text();
+      console.error("OpenAI upstream error", upstream.status, errText);
       const status = upstream.status === 429 ? 429 : 502;
       return jsonResponse({ error: "The AI service is temporarily unavailable. Please try again shortly." }, status, headers);
     }
